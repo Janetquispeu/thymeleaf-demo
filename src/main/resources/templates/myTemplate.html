@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        @page {
+            margin: 25px;
+        }
+
+        body {
+          margin: 0px;
+          padding: 0px;
+          font-family: "Lato","Arial";
+          overflow-x: hidden;
+        }
+
+        tr > th {
+          color: #1A5DAD;
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        ul {
+          margin: 0;
+          padding-inline-start: 0px;
+          list-style: none;
+        }
+
+        li:before {
+          color: #1A5DAD;
+          content: "-";
+          margin-right: 5px;
+        }
+
+        li span {
+          color: #1A5DAD;
+        }
+
+        #b-order-guide-container {
+          display: block;
+          position: relative;
+          width: 500px;
+          overflow: hidden;
+          display: block;
+          padding: 10px 12px;
+          border: 1px solid #4b4d5363;
+          border-radius: 3px;
+        }
+
+        #b-carrier-section,
+        #b-sender-section,
+        #b-delivery-guide-wrapper,
+        #b-recipient-subtitle-wrapper,
+        #b-content-package-subtitle-wrapper,
+        #b-order-number-wrapper,
+        #b-date-wrapper {
+          display: block;
+          margin-bottom: 5px;
+          padding-left: 10px;
+          position: relative;
+        }
+
+        #b-delivery-section {
+          display: block;
+          height: initial;
+          position: relative;
+        }
+
+        #b-right-content {
+          display: block;
+          height: initial;
+          width: calc(100% - 240px);
+        }
+
+        #b-left-content {
+          border: 1px solid #4b4d5363;
+          border-radius: 3px;
+          display: block;
+          height: 90px;
+          position: absolute;
+          right: 0px;
+          top: 5px;
+          width: 250px;
+        }
+
+        #b-recipient-section, #b-content-package-section {
+          display: block;
+          position: relative;
+          width: 500px;
+        }
+
+        #b-reception_code_img {
+          height: 70px;
+          width: 250px;
+        }
+
+        #b-reception_qr_code_img {
+          height: 70px;
+          width: 76px;
+          display: inline-block;
+        }
+
+        .b-subtitle {
+          color: #1A5DAD;
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        .b-flag {
+          background-color: #1A5DAD;
+          display: block;
+          height: 3px;
+          left: -5px;
+          position: absolute;
+          top: 6px;
+          transform: rotate(90deg);
+          width: 15px;
+          border-radius: 5px;
+        }
+
+        .b-text, li {
+          color: #4B4D53;
+          font-size: 11px;
+          font-weight: 500;
+        }
+
+        .b-block {
+          display: block;
+        }
+
+        .b-inline {
+          display: inline-block;
+        }
+
+        .b-recipient-content, .b-content-package {
+          border: 1px solid #4b4d5363;
+          padding: 8px;
+          border-radius: 3px;
+          margin-bottom: 6px;
+        }
+
+        .b-content-package {
+          color: #4B4D53;
+          font-size: 11px;
+          font-weight: 500;
+        }
+
+        .b-delivery-code-section {
+          border: 1px solid #4b4d5363;
+          border-radius: 3px;
+          display: block;
+          margin-top: 10px;
+          height: 85px;
+        }
+
+        .b-float-right {
+          position: absolute;
+          top: -5px;
+          left: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="b-order-guide-container">
+    <div id="b-delivery-section">
+        <div id="b-right-content">
+            <div id="b-delivery-guide-wrapper">
+                <span class="b-flag"></span>
+                <span class="b-subtitle b-block">Guía de Entrega</span>
+                <span class="b-text b-block" th:utext="${guideTemplate.guideNumber}" style="width: 230px; max-height: 30px; overflow: hidden;"></span>
+            </div>
+            <div id="b-order-number-wrapper">
+                <span class="b-flag"></span>
+                <span class="b-subtitle b-block">N° de orden</span>
+                <span class="b-text b-block" th:utext="${guideTemplate.sender.trackingNumber}" style="width: 230px; max-height: 30px; overflow: hidden;"></span>
+            </div>
+            <div id="b-date-wrapper">
+                <span class="b-flag"></span>
+                <span class="b-subtitle b-block">Fecha:</span>
+                <span class="b-text b-block" th:utext="${guideTemplate.sender.date}"></span>
+            </div>
+        </div>
+        <div id="b-left-content" th:if="${guideTemplate.receptionCode}">
+            <table style="height: 100%; width: 100%; padding-left: 8px;">
+                <thead>
+                    <tr>
+                        <th style="width: 70%; text-align: left;">Código de recepción</th>
+                        <th style="width: 30%; text-align: center;">Código QR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="position: relative; width: 70%;">
+                            <img style="width: 158px; height: 55px; margin-left: -6px" th:src="@{'guide/image/'+${guideTemplate.receptionCode}}" />
+                        </td>
+                        <td style="position: relative; width: 30%; text-align: center;">
+                            <img style="width: 55px; height: 55px; margin-top: -3px;" th:src="@{'guide/qr/'+${guideTemplate.receptionCode}}" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="b-carrier-section">
+        <span class="b-flag"></span>
+        <span class="b-subtitle b-block">Transportadora</span>
+        <span class="b-text b-block" th:utext="${guideTemplate.deliveryCompany}"></span>
+    </div>
+    <div id="b-sender-section">
+        <span class="b-flag"></span>
+        <span class="b-subtitle b-block">Remitente</span>
+        <span class="b-text b-block" th:utext="${guideTemplate.sender.name}" style="width: 100%; max-height: 30px; overflow: hidden;"></span>
+    </div>
+    <div id="b-recipient-section">
+        <div id="b-recipient-subtitle-wrapper">
+            <span class="b-flag"></span>
+            <span class="b-subtitle b-block">Destinatario</span>
+        </div>
+        <div class="b-recipient-content" style="min-height: 100px; padding-top: 2px;">
+            <div>
+                <span class="b-subtitle b-inline">Nombre:</span>
+                <span class="b-text" th:utext="${guideTemplate.receiver.name}"></span>
+            </div>
+            <div>
+                <span class="b-subtitle b-inline">Celular:</span>
+                <span class="b-text" th:utext="${guideTemplate.receiver.phoneNumber}"></span>
+            </div>
+            <div>
+                <span class="b-subtitle b-inline">Dirección</span>
+                <span class="b-text" th:utext="${guideTemplate.receiver.address}"></span>
+            </div>
+            <div>
+                <span class="b-subtitle b-inline">Referencia:</span>
+                <span class="b-text" th:utext="${guideTemplate.receiver.reference}"></span>
+            </div>
+        </div>
+    </div>
+    <div id="b-content-package-section">
+        <div id="b-content-package-subtitle-wrapper">
+            <span class="b-flag"></span>
+            <span class="b-subtitle b-block">Contenido del paquete</span>
+        </div>
+        <div class="b-content-package" style="min-height: 150px;">
+            <ul>
+                <li th:each="piece: ${guideTemplate.content.pieces}">
+                    <span style="color: #4B4D53;" th:text="${piece.name}"></span>
+                    <span> ( x</span>
+                    <span th:text="${piece.quantity}"></span>
+                    <span>)</span>
+                </li>
+            </ul>
+        </div>
+        <div class="b-float-right">
+            <span class="b-subtitle b-inline">Total de piezas:</span>
+            <span class="b-text b-inline" th:utext="${guideTemplate.content.totalPieces}"></span>
+        </div>
+    </div>
+    <div>
+        <span class="b-text b-block">*Para cambios o devoluciones el producto tendrá que estar en buenas condiciones y sellado para su venta. <b>Caso contrario no será aceptado</b> </span>
+    </div>
+    <div class="b-delivery-code-section">
+        <table style="height: 100%; width: 100%; padding-left: 20px;">
+            <thead>
+                <tr>
+                    <th style="width: 70%; text-align: left;">Código de entrega</th>
+                    <th style="width: 30%; text-align: center;">Código QR</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="vertical-align: top;">
+                    <td style="position: relative; width: 70%; padding: 0;">
+                        <img style="width: 250px; height: 46px; margin-left: -11px;" th:src="@{'guide/image/'+${guideTemplate.guideNumber}}" />
+                        <div class="b-text" style="text-align: left;">
+                            <span th:utext="${guideTemplate.receptionCode}"></span>
+                        </div>
+                    </td>
+                    <td style="position: relative; width: 30%; padding: 0; text-align: center;">
+                        <img style="width: 55px; height: 55px; margin-top: -2px;" th:src="@{'guide/qr/'+${guideTemplate.guideNumber}}" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

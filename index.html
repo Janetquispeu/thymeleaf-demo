@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+          margin: 0px;
+          padding: 0px;
+          font-family: "Arial";
+          overflow-x: hidden;
+        }
+
+        img {
+          position: absolute;
+          display: block;
+          margin: 0px;
+          border: none;
+          padding: 0px;
+        }
+
+        div {
+          position: absolute;
+        }
+
+        #content-container {
+          display: block;
+          position: relative;
+          width: 750px;
+          height: 842px;
+          overflow: hidden;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #_bg__a4___5 {
+          top: 0px;
+          left: 0px;
+          width: 750px;
+          height: 842px;
+          background: rgb(255, 255, 255);
+        }
+
+
+        #rectangle_2372 {
+          top: 11px;
+          left: -7px;
+          width: 176px;
+          height: 35px;
+        }
+
+
+        #rectangle_2373 {
+          top: 19px;
+          left: 565px;
+          width: 3px;
+          height: 20px;
+        }
+
+
+        #rectangle_7 {
+          top: 57px;
+          left: 10px;
+          width: 87px;
+          height: 45px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          background: #1A5DAD;
+        }
+
+
+        #rectangle_2375 {
+          top: 229px;
+          left: 10px;
+          width: 92px;
+          height: 68px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          background: #1A5DAD;
+        }
+
+
+        #rectangle_2370 {
+          top: 465px;
+          left: 10px;
+          width: 188px;
+          height: 31px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          background: #1A5DAD;
+        }
+
+
+        #rectangle_6 {
+          top: 78px;
+          left: 10px;
+          width: 370px;
+          height: 144.5px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: 0.25px solid #757575;
+          background: rgba(255, 255, 255, 1);
+        }
+
+
+        #rectangle_2369 {
+          top: 249px;
+          left: 10px;
+          width: 370px;
+          height: 103.5px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: 0.25px solid #757575;
+          background: rgba(255, 255, 255, 1);
+        }
+
+
+        #rectangle_2371 {
+          top: 361px;
+          left: 10px;
+          width: 370px;
+          height: 115px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: 0.25px solid #757575;
+          background: rgba(255, 255, 255, 1);
+        }
+
+
+        #image_1 {
+          top: 382px;
+          left: 15px;
+          width: 290px;
+          height: 76px;
+        }
+
+
+        #image_2 {
+          top: 382px;
+          left: 310px;
+          width: 65px;
+          height: 67px;
+        }
+
+
+        #nombre___letsplay {
+          top: 89px;
+          left: 20px;
+          width: 180px;
+          height: 26.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 11px;
+          color: #1A5DAD;
+        }
+
+
+        #nombre___letsplay_ek1 {
+          top: 260px;
+          left: 20px;
+          width: 180px;
+          height: 36.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 11px;
+          color: #1A5DAD;
+        }
+
+
+        #seguimiento___v7687569plzv_01 {
+          top: 114px;
+          left: 220px;
+          width: 150px;
+          height: 26.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #e_mail___sagitarius2701_gmail_com {
+          top: 295px;
+          left: 220px;
+          width: 150px;
+          height: 24.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #c_digo_qr {
+          top: 368px;
+          left: 300px;
+          width: 65px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: right;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 26.5px;
+          color: #1A5DAD;
+        }
+
+
+        #ubigeo___150115 {
+          top: 89px;
+          left: 220px;
+          width: 150px;
+          height: 26.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #tel_fono___150115 {
+          top: 260px;
+          left: 220px;
+          width: 150px;
+          height: 26.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #fecha___01_06_2022 {
+          top: 60px;
+          left: 230px;
+          width: 138px;
+          height: 18.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: right;
+          line-height: 15px;
+          margin-top: -2px;
+          height: 27.5px;
+          color: #1A5DAD;
+        }
+
+
+        #tel_fono___999948170 {
+          top: 114px;
+          left: 20px;
+          width: 180px;
+          height: 26.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #distrito___huacho___150801 {
+          top: 295px;
+          left: 20px;
+          width: 180px;
+          height: 30px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #c_digo_de_recepci_n {
+          top: 365px;
+          left: 50px;
+          width: 112.5px;
+          height: 14.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 12px;
+          color: #1A5DAD;
+        }
+
+
+        #direcci_n___jr__antonio_raymondi_219_la_victoria__al_costado_de_la_galeria_san_andres__centro_comercial_polvos_azules__horario__l_a_s_11am___7pm_ {
+          top: 139px;
+          left: 20px;
+          width: 350px;
+          height: 55px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 13px;
+          color: #1A5DAD;
+        }
+
+
+        #direcci_n___av_9_de_octubre__plazavea_ {
+          top: 326px;
+          left: 20px;
+          width: 350px;
+          height: 15.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 13px;
+          color: #1A5DAD;
+        }
+
+
+        #referencia__ {
+          top: 200px;
+          left: 20px;
+          width: 350px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 26.5px;
+          color: #1A5DAD;
+        }
+
+
+        #referencia___zona_electro_primer_piso {
+          top: 341px;
+          left: 20px;
+          width: 350px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 26.5px;
+          color: #1A5DAD;
+        }
+
+
+        #remitente {
+          top: 61px;
+          left: 30px;
+          width: 82px;
+          height: 18px;
+          overflow: hidden;
+          font-size: 10px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2px;
+          height: 28px;
+          color: #FFFFFF;
+        }
+
+
+        #destinatario {
+          top: 232px;
+          left: 30px;
+          width: 82px;
+          height: 18px;
+          overflow: hidden;
+          font-size: 10px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2px;
+          height: 28px;
+          color: #FFFFFF;
+        }
+
+
+        #informaci_n_de_recepci_n_en_tienda {
+          top: 479px;
+          left: 20px;
+          width: 192px;
+          height: 20px;
+          overflow: hidden;
+          font-size: 10px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2px;
+          height: 30px;
+          color: #FFFFFF;
+        }
+
+        #group_1597310 {
+          top: 18px;
+          left: 450px;
+          width: 107px;
+          height: 21px;
+        }
+
+        #pvv7687569plzv_01 {
+          top: 9px;
+          left: -35px;
+          width: 300px;
+          height: 20px;
+          overflow: hidden;
+          font-size: 12px;
+          font-weight: bold;
+          text-align: right;
+          line-height: 16px;
+          color: #757575;
+        }
+
+
+        #gu_a_de_entrega_ {
+          top: 0px;
+          left: 150px;
+          width: 116px;
+          height: 15px;
+          overflow: hidden;
+          font-size: 8px;
+          text-align: right;
+          line-height: 12px;
+          color: #757575;
+        }
+
+
+        #slv7687569plzv011441 {
+          top: 462px;
+          left: 54px;
+          width: 150px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 11px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -3px;
+          height: 24.5px;
+          color: #757575;
+        }
+
+        #group_1597307 {
+          top: 57px;
+          left: 390px;
+          width: 350px;
+          height: 346px;
+        }
+
+        #rectangle_10 {
+          top: 0px;
+          left: 10px;
+          width: 145px;
+          height: 76px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          background: #1A5DAD;
+        }
+
+
+        #rectangle_11 {
+          top: 22px;
+          left: 10px;
+          width: 340px;
+          height: 384.5px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -webkit-border-radius: 10px;
+          border-radius: 10px;
+          border: 0.25px solid #757575;
+          background: rgba(255, 255, 255, 1);
+        }
+
+
+        #total_de_piezas___10 {
+          top: 35px;
+          left: 30px;
+          width: 134.5px;
+          height: 18.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 27.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition {
+          top: 49px;
+          left: 20px;
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek1 {
+          top: 64px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek2 {
+          top: 79px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek3 {
+          top: 94px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek4 {
+          top: 109px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek5 {
+          top: 124px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek6 {
+          top: 139px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek7 {
+          top: 154px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek8 {
+          top: 169px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #videojuego_ps4_street_fighter_v_champion_edition_ek9 {
+          top: 184px;
+          left: 20px;
+          width: 229.5px;
+          height: 16.5px;
+          overflow: hidden;
+          font-size: 9px;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 25.5px;
+          color: #757575;
+        }
+
+
+        #c_digo_de_entrega {
+          top: 290px;
+          left: 10px;
+          width: 92px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: right;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 26.5px;
+          color: #1A5DAD;
+        }
+
+
+        #c_digo_qr_ek1 {
+          top: 290px;
+          left: 270px;
+          width: 62px;
+          height: 17.5px;
+          overflow: hidden;
+          font-size: 9px;
+          font-weight: bold;
+          text-align: right;
+          line-height: 16px;
+          margin-top: -2.3333333333333px;
+          height: 26.5px;
+          color: #1A5DAD;
+        }
+
+
+        #contenido_del_paquete {
+          top: 4px;
+          left: 30px;
+          width: 140px;
+          height: 17px;
+          overflow: hidden;
+          font-size: 10px;
+          font-weight: bold;
+          text-align: left;
+          line-height: 16px;
+          margin-top: -2px;
+          height: 27px;
+          color: #FFFFFF;
+        }
+
+
+        #image_1_ek1 {
+          top: 310px;
+          left: 20px;
+          width: 250px;
+          height: 80px;
+        }
+
+
+        #image_2_ek1 {
+          top: 311px;
+          left: 280px;
+          width: 65px;
+          height: 67px;
+        }
+
+        #group_1597312 {
+          top: 112px;
+          left: 289px;
+          width: 3px;
+          height: 138px;
+        }
+
+        #ellipse_1 {
+          top: 0px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_2 {
+          top: 15px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_3 {
+          top: 30px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_4 {
+          top: 45px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_5 {
+          top: 60px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_6 {
+          top: 75px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_7 {
+          top: 90px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_8 {
+          top: 105px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_9 {
+          top: 120px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #ellipse_10 {
+          top: 135px;
+          left: 0px;
+          width: 3px;
+          height: 3px;
+          -ms-border-radius: 1.5px / 1.5px;
+          -o-border-radius: 1.5px / 1.5px;
+          -moz-border-radius: 1.5px / 1.5px;
+          -webkit-border-radius: 1.5px / 1.5px;
+          border-radius: 1.5px / 1.5px;
+          background: #1A5DAD;
+        }
+
+
+        #scharf_cd_pvea {
+          top: 23px;
+          left: 10px;
+          width: 280px;
+          height: 21px;
+          overflow: hidden;
+          font-size: 11px;
+          text-align: left;
+          color: #FFFFFF;
+          background-color: #1A5DAD;
+          border-radius: 0 12px 12px 0;
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="content-container">
+    <div id="_bg__a4___5"></div>
+    <div id="rectangle_2373"></div>
+    <div id="rectangle_7"></div>
+    <div id="rectangle_2375"></div>
+    <div id="rectangle_2370" th:if="${guideTemplate.receptionCode}"></div>
+    <div id="rectangle_6"></div>
+    <div id="rectangle_2369"></div>
+    <div id="rectangle_2371" th:if="${guideTemplate.receptionCode}"></div>
+    <img th:src="@{'guide/image/'+${guideTemplate.receptionCode}}" id="image_1" th:if="${guideTemplate.receptionCode}"/>
+    <img th:src="@{'guide/qr/'+${guideTemplate.receptionCode}}" id="image_2" th:if="${guideTemplate.receptionCode}" />
+    <div id="nombre___letsplay">
+        <!-- name remitente -->
+        <span style="font-style:normal; text-decoration:NONE; ">Nombre:</span> <br />
+        <span th:utext="${guideTemplate.sender.name}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="nombre___letsplay_ek1">
+        <span style="font-style:normal; text-decoration:NONE; ">Nombre :</span> <br/>
+        <span th:utext="${guideTemplate.receiver.name}"
+              style="color:#757575; font-style:normal;text-decoration:NONE; "> <br /></span>
+    </div>
+    <div id="seguimiento___v7687569plzv_01">
+        <span style="font-style:normal; text-decoration:NONE; ">N. Orden:</span><br />
+        <span th:utext="${guideTemplate.sender.trackingNumber}"
+              style="color:#757575; font-style:normal;text-decoration:NONE; "> <br /></span>
+    </div>
+    <div id="e_mail___sagitarius2701_gmail_com">
+        <span style="font-style:normal; text-decoration:NONE; ">E-mail:</span><br/>
+        <span th:utext="${guideTemplate.receiver.email}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="c_digo_qr" th:if="${guideTemplate.receptionCode}">
+        Código QR
+    </div>
+    <div id="ubigeo___150115">
+        <span style="font-style:normal; text-decoration:NONE; ">Ubigeo:</span><br />
+        <span th:utext="${guideTemplate.sender.ubigeo}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "> <br /></span>
+    </div>
+    <div id="tel_fono___150115">
+        <span style="font-style:normal; text-decoration:NONE; ">Teléfono : </span><br/>
+        <span th:utext="${guideTemplate.receiver.phoneNumber}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="fecha___01_06_2022">
+        <span style="font-style:normal; text-decoration:NONE; ">Fecha:</span>
+        <span th:utext="${guideTemplate.sender.date}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="tel_fono___999948170">
+        <span style="font-style:normal; text-decoration:NONE; ">Teléfono:</span><br />
+        <span th:utext="${guideTemplate.sender.phoneNumber}"
+              style="color:#757575; font-style:normal;text-decoration:NONE; "> <br /></span>
+    </div>
+    <div id="distrito___huacho___150801">
+        <span style="font-style:normal; text-decoration:NONE; ">Distrito:<br /></span>
+        <span th:utext="${guideTemplate.receiver.district}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="c_digo_de_recepci_n" th:if="${guideTemplate.receptionCode}">
+        Código de recepción
+    </div>
+    <div
+            id="direcci_n___jr__antonio_raymondi_219_la_victoria__al_costado_de_la_galeria_san_andres__centro_comercial_polvos_azules__horario__l_a_s_11am___7pm_">
+        <span style="font-style:normal; text-decoration:NONE; ">Dirección: </span>
+        <span th:utext="${guideTemplate.sender.address}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="direcci_n___av_9_de_octubre__plazavea_">
+        <span style="font-style:normal; text-decoration:NONE; ">Dirección: </span>
+        <span th:utext="${guideTemplate.receiver.address}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="referencia__">
+        Referencia :
+    </div>
+    <div id="referencia___zona_electro_primer_piso">
+        <span style="font-style:normal; text-decoration:NONE; ">Referencia: </span>
+        <span th:utext="${guideTemplate.receiver.reference}"
+              style="color:#757575; font-style:normal; text-decoration:NONE; "></span>
+    </div>
+    <div id="remitente">
+        Remitente
+    </div>
+    <div id="destinatario">
+        Destinatario
+    </div>
+    <div id="informaci_n_de_recepci_n_en_tienda" >
+        Información de recepción en tienda
+    </div>
+
+    <div id="group_1597310">
+        <div id="pvv7687569plzv_01">
+            <span th:utext="${guideTemplate.guideNumber}"></span>
+        </div>
+        <div id="gu_a_de_entrega_">
+            Guía de Entrega:
+        </div>
+
+    </div>
+    <div id="slv7687569plzv011441">
+        <span th:utext="${guideTemplate.receptionCode}" th:if="${guideTemplate.receptionCode}"></span><br />
+    </div>
+
+    <div id="group_1597307">
+        <div id="rectangle_10"></div>
+        <div id="rectangle_11"></div>
+        <div id="total_de_piezas___10">
+            Total De Piezas : <span th:utext="${guideTemplate.content.totalPieces}"></span>
+        </div>
+        <div id="videojuego_ps4_street_fighter_v_champion_edition">
+            <span th:utext="${guideTemplate.content.pieces}"></span>
+        </div>
+
+        <div id="c_digo_de_entrega">
+            Código de entrega
+        </div>
+        <div id="c_digo_qr_ek1">
+            Código QR
+        </div>
+        <div id="contenido_del_paquete">
+            Contenido del paquete
+        </div>
+        <img th:src="@{'guide/image/'+${guideTemplate.guideNumber}}" id="image_1_ek1" />
+        <img th:src="@{'guide/qr/'+${guideTemplate.guideNumber}}" id="image_2_ek1" />
+
+    </div>
+
+    <div id="scharf_cd_pvea">
+        <span th:utext="${guideTemplate.deliveryCompany}"></span>
+    </div>
+
+</div>
+</body>
+</html>

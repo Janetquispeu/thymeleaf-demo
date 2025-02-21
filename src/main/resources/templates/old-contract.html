@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <style type="text/css">
+
+        @font-face {
+            font-family: Calibri;
+            src: url("https://storage.googleapis.com/storuse1prod01public/contract/template/fonts/calibri.woff2") format("woff2"),
+            url("https://storage.googleapis.com/storuse1prod01public/contract/template/fonts/calibri.woff") format("woff");
+        }
+
+        @font-face {
+            font-family: "Calibri Bold";
+            src: url("https://storage.googleapis.com/storuse1prod01public/contract/template/fonts/calibri-bold.woff2") format("woff2"),
+            url("https://storage.googleapis.com/storuse1prod01public/contract/template/fonts/calibri-bold.woff") format("woff");
+        }
+
+        body {
+            font-family: Calibri;
+            font-size: 12px;
+        }
+
+        .title {
+            font-family: "Calibri Bold";
+        }
+
+        .center {
+            margin: auto;
+            width: 700px;
+            padding: 10px;
+        }
+
+        .biggerwidth {
+          height: auto;
+          max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+<div style="text-align: justify; " class="center">
+    <div style="text-align: justify;width: 700px;">
+        <p align="center" class="title">CONDICIONES PARTICULARES <br/> AL CONTRATO DE AFILIACIÓN A LOS
+            MARKETPLACES DE LAS EMPRESAS DE INTERCORP RETAIL</p>
+        <p align="center" class="title"></p>
+        <p style="text-align: justify;">
+            El presente documento contiene las Condiciones Particulares al Contrato de Afiliación al Marketplace de cada una de las empresas del grupo Intercorp Retail, que celebran, de una parte, INDIGITAL XP S.A.C. (INDIGITAL XP); y, de otra parte, el Seller; cuyos datos de identificación constan en las Condiciones Particulares.
+        </p>
+    </div>
+    <span class="title" style="text-decoration: underline;">INDIGITAL XP</span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td><span class="title">Razón Social:</span> INDIGITAL XP S.A.C. </td>
+            <td><span class="title">RUC N°:</span> 20605642731</td>
+        </tr>
+        <tr>
+            <td><span class="title">Domicilio:</span> Calle Morelli, 139, piso 5 </td>
+            <td><span class="title">Distrito/Ciudad:</span> San Borja/Lima </td>
+        </tr>
+        <tr>
+            <td><span class="title">Partida Registral:</span> 14411615 </td>
+            <td><span class="title">Oficina Registral:</span> Lima </td>
+        </tr>
+        <tr>
+            <td><span class="title">Apoderado 1:</span> Viviana Mazzucchelli Crippa </td>
+            <td><span class="title">DNI N°:</span> 10059924 </td>
+        </tr>
+        <tr>
+            <td><span class="title">Apoderado 2:</span> Javier Echecopar Sabogal </td>
+            <td><span class="title">DNI N°:</span> 44360338 </td>
+        </tr>
+    </table>
+    <br/>
+    <span class="title" style="text-decoration: underline;">Seller</span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td><span class="title">Razón Social:</span> <span th:text="${sellerContract.businessName}"></span></td>
+            <td><span class="title">RUC N°:</span> <span th:text="${sellerContract.ruc}"></span> </td>
+        </tr>
+        <tr>
+            <td><span class="title">Domicilio:</span> <span th:text="${sellerContract.fiscalAddress}"></span></td>
+            <td><span class="title">Distrito/Ciudad:</span> <span th:text="${sellerContract.districtAndCity}"></span></td>
+        </tr>
+        <tr>
+            <td><span class="title">Partida Registral:</span> <span th:text="${sellerContract.registerCertificate}"></span></td>
+            <td><span class="title">Oficina Registral:</span> <span th:text="${sellerContract.registerOffice}"></span></td>
+        </tr>
+        <tr>
+            <td><span class="title">Apoderado 1:</span> <span th:text="${sellerContract.firstAttorney}"></span> </td>
+            <td><span class="title">DNI N°:</span> <span th:text="${sellerContract.firstDocumentNumber}"></span>  </td>
+        </tr>
+        <tr>
+            <td><span class="title">Apoderado 2:</span> <span th:text="${sellerContract.secondAttorney}"></span> </td>
+            <td><span class="title">DNI N°:</span> <span th:text="${sellerContract.secondDocumentNumber}"></span> </td>
+        </tr>
+    </table>
+    <br/>
+    <div style="text-align: justify;width: 700px;">
+        <span class="title" style="text-decoration: underline;">Marketplaces</span><br/>
+        <span>Los Marketplaces a los que podrá acceder el Seller, a criterio único y exclusivo de Intercorp Retail, serán los siguientes: </span>
+    </div>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td><span th:text="${sellerContract.agreementEcommerce[3]}"></td>
+            <td><span th:text="${sellerContract.agreementEcommerce[1]}"></span></td>
+        </tr>
+        <tr>
+            <td><span th:text="${sellerContract.agreementEcommerce[0]}"></span></td>
+            <td><span th:text="${sellerContract.agreementEcommerce[4]}"></span></span></td>
+        </tr>
+        <tr>
+            <td><span th:text="${sellerContract.agreementEcommerce[2]}"></span></td>
+            <td><span th:text="${sellerContract.agreementEcommerce[5]}"></span></td>
+        </tr>
+    </table>
+
+    <div style="text-align: justify;width: 700px;">
+      <span>
+          El Seller indicará por escrito a INDIGITAL XP, en la etapa de hunting y a través del presente contrato,
+          los Marketplaces donde desea ofrecer sus productos. Posteriormente, INDIGITAL XP evaluará y determinará
+        discrecionalmente conforme a sus políticas internas si el Seller califica o no para ofrecer sus
+        productos a través de uno o más de los Marketplaces indicados por el Seller, sobre lo cual INDIGITAL XP
+        informará al Seller por escrito.
+
+        </span>
+    </div>
+
+    <br/>
+    <div style="text-align: justify;width: 700px;">
+        <span class="title" style="text-decoration: underline;">Comisión</span>&nbsp;&nbsp;<span th:text="${sellerContract.generalCommission}"></span><br/>
+    </div>
+
+    <div><span>Se aplicará la siguiente comisión para todas las categorías que comercialice el Seller:</span></div>
+    <div style="text-align:center;margin-top:10px;" th:if="${not #lists.isEmpty(sellerContract.categoryCommissions)}">
+        <table width="600px" border="1" cellpadding="0" cellspacing="0" style="margin: 0 auto; border-collapse: collapse;">
+            <tr class="title">
+                <th>Meses</th>
+                <th>Vigencia(Meses)</th>
+                <th>Categoría</th>
+                <th>Comisión</th>
+            </tr>
+            <tr th:each="categoryCommission : ${sellerContract.generalCommission}">
+                <td><span th:text="${categoryCommission.months}"></span></td>
+                <td><span th:text="${categoryCommission.validity} + ' meses' "></span></td>
+                <td> <span th:text="${categoryCommission.name}"></span></td>
+                <td> <span th:text="${categoryCommission.amount} + '%' "></span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div style="text-align: justify;width: 700px;">
+        <br/>
+        <!--      <span>
+                Las partes acuerdan que cada doce (12) meses INDIGITAL XP determinará libremente, e informará al Seller a través
+                de correo electrónico, las comisiones que estarán vigentes durante los próximos doce (12) meses, las cuales
+                pueden variar respecto de las comisiones que venían rigiendo con anterioridad. En caso el Seller no esté de
+                acuerdo con las nuevas comisiones, tendrá el derecho de resolver el presente Contrato, sin que por el
+                ejercicio de dicha facultad quede sujeto a penalidad o responsabilidad alguna.
+              </span>-->
+        <span>
+        INDIGITAL XP se reserva el derecho de revisar el porcentaje y categorías de las Comisiones en cualquier momento,
+        y en caso de modificaciones en las mismas, se le dará aviso al SELLER con una antelación de quince (15) días
+        calendario previos a la fecha efectiva para su ejecución. En caso el Seller no esté de acuerdo con las nuevas
+        comisiones, tendrá el derecho de resolver el presente Contrato, sin que por el ejercicio de dicha facultad
+        quede sujeto a penalidad o responsabilidad alguna.
+      </span>
+    </div>
+
+
+    <br/>
+    <div th:if="${sellerContract.bankAccountNumber != null}">
+        <span class="title" style="text-decoration: underline;">Cuenta Bancaria</span>
+        <div style="text-align:center;margin-top:10px;" >
+            <table width="600px" border="1" cellpadding="0" cellspacing="0" style="margin: 0 auto; border-collapse: collapse;">
+                <tr class="title">
+                    <th>Banco</th>
+                    <th>N° de cuenta</th>
+                    <th>CCI</th>
+                </tr>
+                <tr>
+                    <td><span th:text="${sellerContract.bankAccountNumber}"></span></td>
+                    <td><span th:text="${sellerContract.bankAccountNumber}"></span></td>
+                    <td><span th:text="${sellerContract.bankCciNumber}"></span></td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div style="text-align:center;">
+            <img class="biggerwidth" th:src="@{'seller/image?path='+${sellerContract.bankAccountImage}}"/>
+        </div>
+    </div>
+    <div th:if="${sellerContract.bankDetractionAccountNumber != null}">
+        </br>
+        <span class="title" style="text-decoration: underline;">Cuenta Detracción</span>
+        <div style="text-align:center;margin-top:10px;" >
+            <table width="600px" border="1" cellpadding="0" cellspacing="0" style="margin: 0 auto; border-collapse: collapse;">
+                <tr class="title">
+                    <th>Banco</th>
+                    <th>N° de cuenta</th>
+                    <th>CCI</th>
+                </tr>
+                <tr>
+                    <td><span th:text="${sellerContract.bankDetractionName}"></span></td>
+                    <td><span th:text="${sellerContract.bankDetractionAccountNumber}"></span></td>
+                    <td><span th:text="${sellerContract.bankDetractionCciNumber}"></span></td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div style="text-align:center;">
+            <img class="biggerwidth" th:src="@{'seller/image?path='+${sellerContract.bankDetractionAccountImage}}"/>
+        </div>
+        <br/>
+    </div>
+    <div style="text-align: justify;width: 700px;">
+        <span class="title" style="text-decoration: underline;">Aceptación y conformidad </span>
+        <br/>
+        <span>
+            Al suscribir este documento, el Seller acepta todas las Condiciones Particulares y en las Condiciones Generales
+            del Contrato de Afiliación a los Marketplaces de las Empresas de Intercorp Retail; y se somete a todos los
+            Términos y Condiciones contenidos en ellas. Suscrito en Lima, Perú,
+            a los <span th:text="${sellerContract.day}"></span> días del mes de <span
+                th:text="${sellerContract.month}"></span> del año <span th:text="${sellerContract.year}"></span>.
+        </span>
+    </div>
+    <br/>
+    <br/>
+    <table class="no-spacing, center" width="700px">
+        <tr>
+            <td style="text-align: center;"><span class="title" style="text-decoration: underline;">INDIGITAL XP</span></td>
+            <!--<td><span class="title" style="text-decoration: underline;">Seller</span></td>-->
+        </tr>
+        <tr>
+            <td height="100" style="text-align: center;">
+                <img width="200px" height="100px"
+                     src="https://firebasestorage.googleapis.com/v0/b/pe-gcp-marketplace-01.appspot.com/o/prod%2Ffiles%2Fcontract%2Fapoderado1.jpeg?alt=media&token=1bb10662-d480-4c72-88f9-2ff0bd6bdf66" />
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align: center;">
+                <span class="title" style="text-decoration: overline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            </td>
+            <!--            <td>
+                            <span class="title" style="text-decoration: overline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </td>-->
+        </tr>
+        <tr>
+            <td height="100" style="text-align: center;">
+                <img width="200px" height="100px"
+                     src="https://firebasestorage.googleapis.com/v0/b/pe-gcp-marketplace-01.appspot.com/o/prod%2Ffiles%2Fcontract%2Fapoderado2.PNG?alt=media&token=6aa01ad9-3729-48b5-8b58-00378fe4d58e" />
+            </td>
+            <td height="100"><span></span></td>
+        </tr>
+        <tr>
+            <td style="text-align: center;" ><span class="title" style="text-decoration: overline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            <!--
+                        <td><span class="title" style="text-decoration: overline;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apoderado 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+            -->
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <div style="text-align: justify;width: 700px;">
+        <p align="center" class="title">CONDICIONES GENERALES<br/> AL CONTRATO DE AFILIACIÓN A LOS MARKETPLACES DE LAS EMPRESAS DE INTERCORP RETAIL </p>
+        <p align="center" class="title"></p>
+        <p style="text-align: justify;">
+            El presente documento contiene las Condiciones Generales al Contrato de Afiliación al Marketplace de cada una de las empresas del grupo Intercorp Retail, que celebran, de una parte, INDIGITAL XP S.A.C. (INDIGITAL XP); y, de otra parte, el Seller; cuyos datos de identificación constan en las Condiciones Particulares. La sola suscripción de las Condiciones Particulares supone, automáticamente, la aceptación y conformidad del Seller a todas las Condiciones Generales.
+        </p>
+    </div>
+    <div style="text-align: justify;width: 700px;">
+        <span class="title" style="text-decoration: underline;">PRIMERA:</span> <span class="title">DEFINICIONES</span>
+        <br/>
+        <span style="text-align: justify;">Para efectos del presente Contrato, los términos contenidos en la presente cláusula tendrán el significado que se les atribuye a continuación: </span>
+    </div>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">1.1.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Clientes:</span> son los Usuarios que decidan adquirir Productos del Seller a través de cualquiera de los Marketplace. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.2.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Condiciones Generales:</span> son los términos y condiciones contenidos en el presente documento, que forman parte integrante del Contrato. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.3.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Condiciones Particulares:</span> son los términos y condiciones contenidos en el documento denominado “Condiciones Particulares”, suscrito por INDIGITAL XP y el Seller, que forman parte integrante del Contrato. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.4.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Contrato:</span> es el Contrato de Afiliación al Marketplace, que se encuentra compuesto por las Condiciones Generales y Condiciones Particulares. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.5.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">IR:</span> es el grupo Intercorp Retail, que para efectos de este Contrato se encuentra compuesto por InRetail Pharma S.A., Tiendas Peruanas S.A., Homecenters Peruanos S.A.,  Compañía Food Retail S.A.C, Real Plaza S.R.L., Mifarma S.A.C.; y las subsidiarias de cada una de ellas. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.6.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">INDIGITAL XP:</span> es INDIGITAL XP S.A.C., quien actúa en el presente Contrato, en nombre propio y en representación de todas y cada una de las empresas que integran IR; cuyos datos de identificación constan en las Condiciones Particulares. Cuando en el Contrato se haga referencia a INDIGITAL XP, se entenderá que se refiere, indistintamente, a dicha empresa o a cualquiera de las empresas que forman parte de IR. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.7.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Marketplace:</span> es, indistintamente, el sitio web de cada una de las empresas de IR, seleccionado unilateralmente por INDIGITAL XP, que permitirá al Sellers y a los Usuarios relacionarse entre sí para efectuar una o más transacciones comerciales en forma digital:
+                <br/>
+                - www.promart.pe
+                <br/>
+                - www.oechsle.pe
+                <br/>
+                - www.plazavea.pe
+                <br/>
+                - www.inkafarma.pe
+                <br/>
+                - www.realplaza.com
+                <br/>
+                -	www.mifarma.com.pe
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.8.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Medios de Pago Autorizados:</span> Son las tarjetas de crédito y débito que son aceptadas dentro de la pasarela de pagos: ¡Tarjeta Oh! MasterCard, Tarjeta Oh! Visa, Visa, MasterCard, Diners y American Express emitidas por bancos nacionales. No será aceptada ninguna tarjeta cerrada o foránea (aquella que no cuenta con el logo de MasterCard, Visa, American Express o Diners).</td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.9.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Portal:</span> Es el dominio web de cada Marketplace donde se ofrecerán los productos del Seller. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.10.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Producto(s):</span> Son todos aquellos productos y/o servicios del Seller que se anunciarán dentro del Marketplace de cada una de las empresas de IR.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.11.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Producto defectuoso / Falla de Producto:</span> Un Producto defectuoso o Producto con falla es aquel que presenta algunas características como, por ejemplo: empaque en mal estado o roto, producto con señales de uso, accesorios faltantes, producto con características distintas a las ofrecidas.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.12.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Seller:</span> Es la empresa que participa en el presente Contrato para ofrecer sus productos y/o servicios a través del Marketplace de cada una de las empresas de IR, cuyos datos de identificación constan en las Condiciones Particulares. </td>
+        </tr>
+        <!--        <tr>
+                    <td style="vertical-align: top;">1.1.</td>
+                    <td style="text-align: justify;"><span style="text-decoration: underline;">Clientes:</span> son los Usuarios que decidan adquirir Productos del Seller a través de cualquiera de los Marketplace. </td>
+                </tr>-->
+        <tr>
+            <td style="vertical-align: top;">1.13.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Seller Center:</span> Herramienta remota que permite al Seller tener control de sus ventas e inventarios de los productos ofrecidos en el Marketplace de cada una de las empresas de IR.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.14.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Términos y Condiciones:</span> son los términos y condiciones contenidos en las Condiciones Generales y las Condiciones Particulares que forman parte integrante de este Contrato. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">1.15.</td>
+            <td style="text-align: justify;"><span style="text-decoration: underline;">Usuarios:</span> son todas las personas que accedan al Marketplace en busca de ofertas de productos y servicios.  </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <div style="text-align: justify;width: 700px;">
+        <span class="title" style="text-decoration: underline;">SEGUNDA: </span> <span class="title"> CAPACIDAD</span>
+        <br/>
+        <span>El Seller declara lo siguiente: (i) cuenta con capacidad para contratar en representación de tal entidad y de obligar a la misma en los Términos y Condiciones, los mismos que realizan esta acción a través de un representante legal con poderes suficientes a fin de contratar y aceptar los presentes Términos y Condiciones; (ii) la dirección señalada en el registro es el domicilio principal de dicha entidad; (iii) cualquier otra información presentada a  INDIGITAL XP es verdadera, precisa, actualizada y completa.</span><br/>
+        <span>
+  El Marketplace sólo está disponible para personas que tengan capacidad legal para contratar. No podrán utilizar los servicios del Marketplace las personas que no tengan esa capacidad - entre estos los menores de edad según lo que se dispone en nuestra Legislación Peruana. Los actos que los menores realicen en este sitio serán responsabilidad de sus padres, tutores, encargados o curadores, y por tanto se considerarán realizados por éstos en ejercicio de la representación legal con la que cuentan. </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">TERCERA: </span> <span class="title"> REGISTRO </span>
+        <br/>
+        <span style="text-align: justify;">Es obligatorio completar el registro de ingreso al Sistema Seller Center, por lo que el Seller deberá realizarlo con su información de manera exacta, precisa y verdadera. El registro deberá contener la información requerida para su inscripción en el, entre ellas: (i) número cuenta bancaria, (ii) copia del último estado de cuenta bancaria, (iii) domicilio, (iv) copia del DNI del representante legal, (v); ficha RUC, (vi)Declaración jurada que incluya el número cuenta bancaria; a nombre de la persona que firma el convenio con el Marketplace IR.(VII)Vigencia de poderes; con no más de seis meses de antigüedad.</span><br/>
+        <span style="text-align: justify;">El Seller asumirá el compromiso de actualizar dichos datos conforme resulte necesario, a través del botón de soporte del Seller Center y será atendido en los plazos previstos. </span><br/>
+        <span style="text-align: justify;">El Seller será responsable de todas y cada una de las actividades que se realicen por su cuenta por lo que quedará bajo su responsabilidad todos los actos realizados en esta. INDIGITAL XP no asumirá en ningún caso responsabilidad por el uso indebido de la contraseña por parte del Seller por lo que, el Seller acepta expresamente que será responsable frente a terceros que puedan sufrir consecuencia alguna por ello. Contenido revisar esto  </span><br/>
+        <span style="text-align: justify;">INDIGITAL XP identificará a los Sellers que no ingresen al Seller Center por un periodo de treinta días calendario, quienes serán notificados por correo electrónico indicándole su baja al sistema lo que generará que su cuenta de Seller Center se desactive e impida el ingreso a la misma. Contenido  </span><br/>
+        <span style="text-align: justify;">Se necesita completar el proceso de registro para que el equipo de INDIGITAL XP pueda enviar los accesos correspondientes de la plataforma Seller Center. </span><br/>
+        <span style="text-align: justify;">Para reactivar la cuenta, a pedido del Seller, INDIGITAL XP notificará al Seller para que pueda pasar por una capacitación de reforzamiento, previa reactivación de la cuenta; en caso la cuenta esté desactivada por más de tres meses. En caso la cuenta este desactiva por un periodo menor a tres meses, INDIGITAL XP activará la cuenta en automático a solicitud del Seller.  Asimismo, se garantiza que el Seller mantendrá actualizado su catálogo, stock y precios e información de transporte. </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">CUARTA: </span> <span class="title"> MODIFICACIONES DE LOS TÉRMINOS Y CONDICIONES GENERALES</span>
+        <br/>
+        <span>INDIGITAL XP podrá modificar los Términos y Condiciones en cualquier momento haciéndolo público en el Portal al que tendrá acceso el Seller. Todos los términos modificados entrarán en vigencia a los diez días hábiles siguientes a su publicación. Dentro de los cinco días hábiles siguientes a la publicación de las modificaciones introducidas, el Seller deberá a INDIGITAL XP si es que no acepta las mismas; en ese caso quedará disuelto el vínculo contractual y será inhabilitado como Seller dentro de los siguientes dos días hábiles. En este supuesto, será responsabilidad del Seller culminar las órdenes de compra y/o pedidos que se hayan realizado con anterioridad a la resolución del contrato. </span><br/>
+        <span>Vencido el plazo de cinco días hábiles antes referido, se considerará que el Seller acepta los nuevos Términos y Condiciones y el contrato continuará vinculando a ambas partes. Será responsabilidad del Seller revisar los Términos y Condiciones cada vez que utilice la página web.</span>
+    </div>
+    <br/>
+    <br/>
+
+
+    <span class="title" style="text-decoration: underline;">QUINTA: </span> <span class="title"> DE LA HERRAMIENTA SELLER CENTER </span>
+    <br/>
+    <span style="text-align: justify;">INDIGITAL XP pone el Seller Center a disposición del Seller, sujeto a los siguientes términos y condiciones: </span><br/>
+    <br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">a)</td>
+            <td style="text-align: justify;">El Seller declara y acepta que el Seller Center ha sido puesta a su disposición de manera unilateral por parte de INDIGITAL XP y que el uso de la misma puede ser interrumpida en cualquier momento a entera discreción de INDIGITAL XP.</td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">b)</td>
+            <td style="text-align: justify;">El Seller declara y acepta que INDIGITAL XP no responderá de ninguna manera frente al Seller o sus clientes finales por las siguientes causales: (i) por el uso que el Seller realice dentro del Seller Center, bien sea de manera directa o por conducto de los usuarios que designe para el llenado de la información; (ii) inconsistencias o falta de actualización de la información incluida en el Seller Center por el Seller o a quienes designe para dicha acción; (iii) la certeza y precisión de la información incluida en la Seller Center por el Seller o a quien designe para dicha acción; (iv) el funcionamiento ininterrumpido del Seller Center; o (v) la integridad de la información una vez integrada al Seller Center o su backup.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">c)</td>
+            <td style="text-align: justify;">El Seller declara y acepta que es el único responsable frente a INDIGITAL XP y los Usuarios y Clientes de la información de los Productos que ofrece, sea que la misma sea incluida en el Seller Center o no, y de la adecuada salvaguarda de su información comercial fuera de dicha herramienta.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">d)</td>
+            <td style="text-align: justify;">El Seller será el único responsable de mantener la seguridad de la contraseña que INDIGITAL XP le otorgue para utilizar el Seller Center y no podrá revelar a ninguna otra persona ajena el uso de la misma tal contraseña. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">e)</td>
+            <td style="text-align: justify;">El Seller será el único responsable de cualquier mal uso dado a su contraseña y se obliga notificar a INDIGITAL XP en cuanto tenga conocimiento de algún uso inadecuado que se haya dado a la misma. En caso ocurriese alguna acción que generé un daño directo o indirecto a INDIGITAL XP, el Seller deberá de indemnizar por los daños y perjuicios que se le causen por esto. Adicionalmente, el Seller es el único responsable de mantener su información actualizada y completa en la plataforma Seller Center, incluyendo la actualización y veracidad de los documentos aportados como estado de cuenta bancario, comprobante tributario, comprobante de domicilio, etc. </td>
+        </tr>
+    </table>
+    <div style="text-align: justify; width: 700px;">
+        <span>INDIGITAL XP o cualquiera de las empresas de IR se encuentra facultada de cobrar al Seller por el uso del Seller Center en cualquier momento, según lo que considere pertinente, para lo cual INDIGITAL XP comunicará la decisión al Seller con treinta días de anticipación; sin perjuicio del derecho que asiste al Seller de terminar el presente Contrato conforme a la cláusula Cuarta.    </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">SEXTA: </span> <span class="title">DE LA INFORMACIÓN EN LA HERRAMIENTA SELLER CENTER</span>
+        <br/>
+        <span style="text-align: justify;">El Seller, a través del Seller Center, deberá cargar contenido respecto de su(s) Producto(s) y/o servicios. Dicho contendido incluirá información necesaria para su posterior venta en el Marketplace. El contenido de la información deberá de consignar con las siguientes especificaciones:  </span>
+        <br/>
+
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">Descripción pormenorizada del (los) Producto(s) y/o servicios en idioma español; </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">Cantidad de Productos y/o servicio para ser comercializados a través del Servicio Marketplace (SKU); </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">Información sobre existencias y disponibilidad del(los) Producto(s) y/o servicios  (stock disponible, el cual no podrá ser menor de dos unidades). </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">d)</td>
+                <td style="text-align: justify;">En caso exclusivamente venta de Producto(s): condiciones de envío y de despacho del(los) Producto(s). El Seller no podrá realizar cambios de nombre, precios y/u otras especificaciones en el módulo Gestión de Envíos, sección transportistas del Seller Center cuando el despacho es gestionado por INDIGITAL XP. El incumplimiento está sujeto a una penalización señalada en la cláusula décimo novena.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">e)</td>
+                <td style="text-align: justify;">La(s) imagen(es) digitalizada(s) del (los) Producto(s) tomadas por el Seller las mismas que deberán de tener el permiso del autor de ser el caso y las siguientes características: 1000x1000 pixeles con 75DPI, tamaño de 200KB, fondo totalmente blanco (sin marcas de agua), mínimo una imagen y máximo tres.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">f)</td>
+                <td style="text-align: justify;">El precio de venta deberá de contener el precio total del (los) Producto(s) únicamente en moneda local (Soles, S/), el cual ya debe de incluir lo siguiente:
+                    <br/>
+                    - Tributos (previsto por la legislación aplicable).
+                    <br/>
+                    - Comisiones.
+                    <br/>
+                    - Se deberá de consignar si el precio establecido corresponde por unidad de Producto.
+                    <br/>
+                    - El (los) Producto(s) no podrá(n) estar sujeto(s) a promociones, respecto a los precios.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">g)</td>
+                <td style="text-align: justify;">Manual aplicable para cada Producto en idioma español; </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">h)</td>
+                <td style="text-align: justify;">Peso y dimensiones de (los) Producto(s) en kilogramos y centímetros; </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">i)</td>
+                <td style="text-align: justify;">En caso de servicios de cursos, talleres o similares considerar duración y disponibilidad.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">j)</td>
+                <td style="text-align: justify;">Marca y modelos del (los) Producto(s); </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">k)</td>
+                <td style="text-align: justify;">Código de Barras, (Upc/Ean); </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">l)</td>
+                <td style="text-align: justify;">Accesorios; </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">m)</td>
+                <td style="text-align: justify;">Instrucciones de limpieza, patrones de coloración o similares, toda aquella precaución que se deberá de tener con el (los) Producto(s); </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">n)</td>
+                <td style="text-align: justify;">Condiciones y requerimientos de uso y manejo para la exigibilidad de las garantías;  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">o)</td>
+                <td style="text-align: justify;">Cualquier otra información razonablemente requerida por INDIGITAL XP:  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">p)</td>
+                <td style="text-align: justify;">Peso y dimensiones del (los) empaque(s) para el envío del (los) Producto(s);  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">q)</td>
+                <td style="text-align: justify;">En caso de producto(s), especificar el plazo de la garantía por parte del Seller y por parte del proveedor original;  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">r)</td>
+                <td style="text-align: justify;">Condición general del Producto (únicamente se pueden vender productos nuevos y originales).  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">s)</td>
+                <td style="text-align: justify;">Política de devoluciones.  </td>
+            </tr>
+        </table>
+        <span>INDIGITAL XP se reserva el derecho de modificar la lista descrita por nuevas especificaciones en cualquier momento para ello; sin
+  perjuicio del derecho que asiste al Seller de terminar el presente Contrato conforme a la cláusula Cuarta. </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">SÉTIMA: </span> <span class="title">APOYO PARA USO Y FUNCIONAMIENTO DE LA HERRAMIENTA SELLER CENTER</span>
+        <br/>
+        <span>En caso el Seller, ya sea por petición propia, por urgencia del negocio, y/o por haber detectado fallas o incongruencias en cualquier apartado de la puesta en venta del (los) Producto(s), solicite o reciba apoyo por parte de INDIGITAL XP con el objetivo de lograr la elaboración y carga de su catálogo (productos), el Seller será el único y exclusivo responsable de verificar que los datos, imágenes, descripción, precio o cualquier otro dato relacionado con el producto sea el correcto y será el Seller el obligado a activar su(s) producto(s) para quedar visibles en el Portal, deslindando a INDIGITAL XP de la información que se  publica. </span>
+        <br/>
+        <br/>
+        <span class="title" style="text-decoration: underline;">OCTAVA: </span> <span class="title">DEL SELLER </span>
+        <br/>
+        <span>El Seller deberá de cumplir con ciertos requisitos para que INDIGITAL XP proceda con su registro:  </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td>Ser una persona jurídica o persona natural con negocio que realice actividades comerciales. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td>Poseer RUC activo. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">El Seller que desee acceder y/o usar el Portal podrá hacerlo sujetándose a los Términos y Condiciones descritos en el presente, así como a la Política de Privacidad. En consecuencia, todas las visitas y cada una de las operaciones y transacciones que se realicen en este sitio, así como sus efectos jurídicos, quedarán regidos por estas reglas y sometidas a la legislación aplicable en la República del Perú. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">d)</td>
+                <td style="text-align: justify;">El Seller necesariamente tendrá al menos un representante legal con poderes suficientes a fin de que puedan contratar y aceptar los términos del presente contrato. En el caso de ser personas naturales con negocio también deberán contar con la capacidad suficiente para contratar. </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">NOVENA: </span> <span class="title">DE LAS OBLIGACIONES DEL SELLER  </span>
+        <br/>
+        <span>El Seller está de acuerdo en que además de las obligaciones previstas en las distintas disposiciones de los presentes Términos y Condiciones, deberá de cumplir con lo siguiente:  </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">Informar a INDIGITAL XP diariamente vía el Seller Center el volumen de inventario disponible de los Productos y/o servicios. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">No usar en sus Productos y/o servicios u ofertas las marcas de titularidad de las empresas de IR y/o sus subsidiarias; en particular, aquellas referidas a INDIGITAL XP, Oechsle, Plaza vea, Vivanda, Inkafarma, Mifarma y Real Plaza. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">En caso de productos, honrar la garantía otorgada y emitir las facturas correspondientes a los clientes conforme a lo establecido en las leyes aplicables vigentes </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">d)</td>
+                <td style="text-align: justify;">Responder y subsanar cualquier conflicto o queja presentada de los Usuarios en contra de INDIGITAL XP por cuestiones anteriormente mencionadas y que sujeten a INDIGITAL XP a la contingencia de un juicio, requerimiento, reclamo, queja o cualquier otro procedimiento en el que INDIGITAL XP se vea afectado por faltas o descuidos del Seller. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">e)</td>
+                <td style="text-align: justify;">En caso de productos, entregarlos en perfectas condiciones, con estricto cumplimiento de las condiciones técnicas ofrecidas, perfectamente embaladas, envasadas, embolsadas, según corresponda, en perfecto estado de funcionamiento, especificaciones técnicas de cada Producto y en observancia de los más altos estándares de calidad y en cumplimiento de todos los requerimientos aplicables a su naturaleza, incluidos, aunque sin limitarse a ello, a los requisitos fitosanitarios, de derechos de autor y propiedad industrial e intelectual, de publicidad, de rotulado, de precio, etiquetado, peso, gramaje, fiscales, de protección al consumidor (de acuerdo a lo establecido en la Ley N° 29571 Código De Protección Y Defensa Del Consumidor) y de salubridad en general y aquellos contenidos en la legislación aplicable y en las normas oficiales peruanas correspondientes. Las mismas condiciones deben ser cumplidas por los empaques correspondientes. En tal sentido, El Seller garantiza que sus Productos, así como el contenido del material publicitario que éste desarrolle, cuando corresponda, cumplen con la normativa legal vigente. Asimismo, garantiza que los mismos no contienen información falsa ni engañosa o susceptible de inducir a error a los consumidores, no menciona o alude a bondades o propiedades que los productos no tienen, y revela todas las advertencias, precauciones y/o contraindicaciones que la normativa vigente exige, cuando corresponda. En consecuencia, ante cualquier infracción y/o reclamo derivados de lo señalado anteriormente, El Seller asumirá, a solo requerimiento de INDIGITAL XP, o cualquiera de las empresas que componen IR, los costos de la defensa legal de la misma y/o sus empresas vinculadas y sus funcionarios en el marco de los procedimientos y/o procesos que se inicien, así como cualquier contingencia y/o daño derivados de los mismos, manteniendo indemne a INDIGITAL XP, IR y/o cualquiera de sus empresas vinculadas por cualquier infracción, sanción, medida correctiva, daño y/o perjuicio derivado de dicho incumplimiento y asumirá toda responsabilidad por cualquier daño y/o sanción derivada de los mismos y los costos y gastos que todo ello conlleve.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">f)</td>
+                <td style="text-align: justify;">El Seller será responsable por: i) la idoneidad, calidad, diseño y presentación de sus Productos y de los envases que los contienen; ii) los defectos de sus Productos, sean éstos importados o fabricados en el Perú; iii) los daños o perjuicios directos o indirectos que el manejo, uso o consumo de sus Productos pudieran causar a los clientes y/o terceros; iv) garantizar que todos sus Productos cumplen con todas las disposiciones que la normativa sanitaria, en caso corresponda, y legal vigente exige. El Seller asumirá todos los costos directos o indirectos de denuncias y sanciones iniciadas o impuestas a INDIGITAL XP, IR y/o cualquiera de sus empresas vinculadas por el incumplimiento de lo antes estipulado. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">g)</td>
+                <td style="text-align: justify;">En caso INDIGITAL XP requiera al Seller el cambio de su empaque y/o embalaje con el objetivo de proteger sus productos y de que le llegue en buen estado al cliente, deberá de realizarlo a la brevedad posible para evitar contingencias. Aplicable solo en caso de venta de productos. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">h)</td>
+                <td style="text-align: justify;">El Seller entiende y acepta el cabal cumplimiento de la cláusula vigésimo segunda sobre Protección de datos personales.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">i)</td>
+                <td style="text-align: justify;">En caso el Seller decidiera retirar del mercado un Producto y/o servicios incluido en el Marketplace, deberá manifestarlo por escrito a INDIGITAL XP con una antelación de un (01) día hábil para que INDIGITAL XP proceda a realizar la actualización en el Portal. Lo anterior se aplicará, siempre y cuando no existan órdenes de compra generadas, las mismas que deberán ser entregadas al cliente. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">j)</td>
+                <td style="text-align: justify;">El Seller tiene la obligación de evitar anunciar productos y/o servicios que no tenga en inventario para dar pleno cumplimiento a estos Términos y Condiciones. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">k)</td>
+                <td style="text-align: justify;">El Seller debe garantizar la disponibilidad de los Productos y/o servicios, así como de los repuestos y mantenimientos que eventualmente puedan requerirse. En caso exista algún tipo de reclamo por parte del cliente sobre piezas faltantes o no existencia de repuestos, el Seller asumirá total responsabilidad frente a ello en donde responderá en caso de daño directo o indirecto hacia INDIGITAL XP por reclamo, queja o denuncia suscitada. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">l)</td>
+                <td style="text-align: justify;">Para campañas 30% de incremento de stock sobre el stock manejado.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">m)</td>
+                <td style="text-align: justify;">Todas las marcas de los Productos y/o servicios que el Seller pretenda comercializar a través del Marketplace, deben estar previamente registradas ante la autoridad competente (INDECOPI) y no infringir derechos de terceros. INDIGITAL XP podrá solicitar en cualquier momento sustento de la documentación que acredite ello.  En caso, INDIGITAL XP enfrente algún conflicto por derechos de autor o de propiedad industrial o intelectual derivado de las publicaciones o Productos del Seller, el Seller asumirá toda responsabilidad por ello.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">n)</td>
+                <td style="text-align: justify;">El Seller se compromete a adecuar su accionar de acuerdo respeto y cumplimiento de todas las Políticas implementadas por INDIGITAL XP, los mismos que se encuentran establecido en el sitio web de cada empresa de IR.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">o)</td>
+                <td style="text-align: justify;">El Seller debe ofrecer ofertas exclusivas en el Marketplace que sean menores o iguales a las que mantiene en otros portales, teniendo como excepción su propia web. Sin embargo, el Seller podrá ofrecer sus productos en ofertas exclusivas en otros portales siempre y cuando el Retail que ofrece los productos asuma el descuento bajo una tarjeta de crédito, fidelización y descuentos exclusivos, informando de ello a INDIGITAL XP. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">p)</td>
+                <td style="text-align: justify;">En caso un Producto necesite instalación el Seller deberá de ser responsable de ello, incluyéndole el costo en el precio de venta del producto. No está contemplado negociar con el cliente fuera de la transacción. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">q)</td>
+                <td style="text-align: justify;">De no colocar de manera clara con los ítems en el inciso p) se eliminará el producto de la plataforma y a su vez se evaluará la permanencia del Seller en la plataforma </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">r)</td>
+                <td style="text-align: justify;">El Seller deberá indicar de manera clara sus Términos y Condiciones por Producto publicado, los cuales deberán de contar de manera obligatoria con los siguientes ítems:
+                    <br/>
+                    - Especificaciones
+                    <br/>
+                    - Descripción del Producto
+                    <br/> 
+                    - Sobre la marca
+                    <br/> 
+                    - Ficha técnica
+                    <br/> 
+                    - Garantías
+                    <br/> 
+                    - Políticas de devolución
+                    <br/> 
+                    - Opciones de envío y despacho del (los) Producto(s)
+                    <br/>  
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">s)</td>
+                <td style="text-align: justify;">
+                    En caso IR sea responsable de algún descuento/promoción/subvención aprobado a favor del cliente, el Seller se obliga a remitir la factura por el monto establecido a nombre de la empresa correspondiente en un plazo máximo de 30 días calendario desde solicitud notificada por INDIGITAL XP y/o IR, caso contrario, posterior al plazo antes mencionado, el Seller será quien se encuentre obligado a asumir el monto ofrecido en descuento/promoción/subvención. Se deja establecido que una vez cumplido el plazo antes mencionado, IR no aceptara facturas bajo el concepto de descuento.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">t)</td>
+                <td style="text-align: justify;">
+                    Asimismo, en caso de pérdida/daños de la mercadería por terceros distintos al Seller, una vez confirmado ello por el área correspondiente de IR y/o INDIGITAL XP, el Seller procederá a emitir la factura respectiva de acuerdo al detalle que INDIGITAL XP y/o IR le indique, siendo la misma pagadera en un plazo de 30 días calendario desde registrada la misma.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DECIMA: </span> <span class="title">DEL COBRO DE LA COMISIÓN </span>
+        <br/>
+        <span>El Seller quedará sujeto al pago de una comisión por el uso del Marketplace equivalente al porcentaje del importe de la venta de los productos vendidos, que se indica en las Condiciones Particulares, más el Impuesto General a las Ventas. </span>
+        <br/>
+        <br/>
+        <span>Para ello, INDIGITAL XP remitirá dentro de los cuatro días hábiles, culminada la quincena de cada mes, la liquidación respectiva, y el Seller contará con un día hábil para emitir sus observaciones; de no presentar observaciones en dicho plazo, INDIGITAL XP considerará la liquidación como aceptada y la empresa de IR correspondiente procederá con la facturación respectiva. De presentarse observaciones posteriores o devoluciones de productos y/o anulaciones de compras, éstas serán consideradas en la liquidación del mes siguiente de realizadas las mismas. </span>
+        <br/>
+        <br/>
+        <span class="title" style="text-decoration: underline;">DECIMO PRIMERA: </span> <span class="title">DE LAS OBLIGACIONES DE INDIGITAL XP  </span>
+        <br/>
+        <span>INDIGITAL XP está de acuerdo en que además de las obligaciones previstas en las distintas disposiciones de los presentes Términos y Condiciones, deberá de cumplir con lo siguiente:  </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">Ofrecer el (los) Producto(s) del Seller a los Usuarios a través de el(los) Marketplece(s) que INDIGITAL XP estime conveniente, sin restricción alguna, salvo por disposición legal aplicable u orden de autoridad competente. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">Informar al Seller las promociones y campañas de venta que lance las compañías siempre que así lo considere. El Seller se adhiere a las mismas, en las condiciones establecidas por INDIGITAL XP.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">INDIGITAL XP procederá a comunicarse con el Seller en todos los casos que considere necesario.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">d)</td>
+                <td style="text-align: justify;">INDIGITAL XP revisará y validará el contenido de todos los datos ingresados previa publicación del Producto y/o servicio dentro de cada Marketplace y, de encontrarla conformes con sus políticas y Términos y Condiciones aquí establecidos, la aprobará y activará en el Portal. En caso contrario, devolverá la oferta al Seller para que esté lo mejore conforme a las pautas indicas por INDIGITAL XP.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">e)</td>
+                <td style="text-align: justify;">INDIGITAL XP o cada empresa de IR generará para cada Producto y/o servicio un SKU (código interno de Producto) que lo identificará dentro del sistema interno de cada empresa de IR. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">f)</td>
+                <td style="text-align: justify;">INDIGITAL XP o cada empresa de IR marcará cada Producto y/o servicio que se venda dentro del Portal con la leyenda: “Producto vendido y enviado por [Nombre del Seller]”. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">g)</td>
+                <td style="text-align: justify;">INDIGITAL XP o cada empresa de IR podrá evaluar el comportamiento de venta, entrega, tiempo de entrega, calidad del Producto y/o servicios, inventario de Producto, y en general cualquier situación referente a su desempeño a través de una auditoría a manera de feedback. Esta acción se realizará a entera discreción de INDIGITAL XP y cuando se considere enteramente satisfecho, INDIGITAL XP podrá otorgar beneficios al Seller, los mismo que los dará a conocer mediante cualquier medio escrito o comunicación electrónica.  </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DÉCIMO SEGUNDA: </span> <span class="title">DE LA RESPONSABILIDAD DEL SELLER </span>
+        <br/>
+        <span>Es responsabilidad del Seller los siguientes ítems:  </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">El Seller es único y absoluto responsable por la carga de los Productos y/o servicios en el Seller Center, lo que significa que deberá de cerciorarse y hacerse responsable de las especificaciones cargas en el contenido y descripción del mismo. Cualquier error o falta de información en la descripción y contenido en el que incurra el Seller ya sea por acción u omisión, y exista reclamo, queja, devolución o perjuicio al cliente, será responsabilidad del Seller contactar al Cliente en un plazo máximo de 2 días hábiles. En caso el Seller y el Cliente no arriben a un acuerdo conciliatorio, INDIGITAL XP queda en absoluta libertad de cancelar la orden y reembolsar de inmediato al Cliente además de indemnizarlo conforme a la legislación vigente. INDIGITAL XP no asumirá responsabilidad alguna por información incorrecta recibida e incluida en el Portal aun cuando intervenga para realizar correcciones o mejorar en la descripción o contenido (se ejecutará en cumplimiento de la cláusula sétima), por lo que es entera responsabilidad del Seller revisar constantemente todo lo referente a sus productos y/o servicios, ordenes u otros y libera de cualquier responsabilidad a INDIGITAL XP.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">El precio de venta será determinado por el Seller es por ello que será responsable del cumplimiento de lo establecido en la cláusula sexta inciso (f). Además, deberá tener en cuenta lo previsto en la legislación aplicable y competencia económica. De presentarse alguna afectación por concepto de la ilegalidad manipulación de precios por parte del Seller, este asumirá de manera expresa las acciones y pronunciamientos (Multas) Administrativos por el Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (INDECOPI), siempre que el acto ilegal quede debidamente comprobado. Así mismo, incurre al cobro de penalidad señalada en la cláusula décimo novena. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">Las partes aceptan y entienden que la relación comercial es de contratistas independientes, por lo que, no colaboran en la fijación de precios que es facultad única y exclusiva del Seller. Debido a ello, el canal de venta de las empresas de IR a través del Seller Center concede plena libertad competitiva al Seller debiendo aseguras las condiciones más atractivas de venta de sus respectivos Productos. Por ese motivo, el Seller debe ofrecer en el Marketplace ofertas exclusivas que sean menores o iguales a otros portales. Sin embargo, el Seller podrá ofrecer sus productos en ofertas exclusivas en otros portales siempre y cuando el retail que ofrece los productos asuma el descuento bajo una tarjeta de crédito, fidelización y descuentos exclusivos informando la acción comercial al correo de INDIGITAL XP. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">d)</td>
+                <td style="text-align: justify;">En caso que INDIGITAL XP detecte que el Seller se encuentra en incumplimiento del párrafo anterior y la variación del precio sea visible y/o desproporcional, INDIGITAL XP se reserva el derecho para desactivar o apagar el (los) Producto(s) que no cumpla esta característica.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">e)</td>
+                <td style="text-align: justify;">El Seller acepta que un producto podrá ser eliminado por parte de INDIGITAL XP y/o las empresas de IR en caso de tener problemas de originalidad, calidad, o cualquier reclamo por parte del cliente o un tercero, respecto a la veracidad de la información presentada en el Portal. El Seller no podrá publicar nuevamente dicho producto dentro del Portal. El incumplimiento de esta cláusula dará derecho a INDIGITAL XP a ejecutar una penalidad por el monto de S/ 1,000, los mismos que se podrán cobrar en forma de compensación o descuento en la factura por pagar al Seller.   </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">f)</td>
+                <td style="text-align: justify;">INDIGITAL XP se reserva el derecho de, a su entera discreción, decidir no promocionar en el Portal uno o varios Productos.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">g)</td>
+                <td style="text-align: justify;">El Seller no deberá cambiar precio posterior a que se le informe de alguna campaña vía mail o teléfono para no perjudicar los espacios negociados dentro de los ecommerce.  De lo contrario se procederá a pasar el stock a cero hasta finalizar dicha campaña.  </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">h)</td>
+                <td style="text-align: justify;">El seller debe emitir una factura a nombre de cada plataforma: Homececenters peruanos SA, Tiendas peruanas SA, Compañía Food Retail S.A.C, REAL PLAZA S.R.L., Mifarma S.A.C., Inretail Pharma S.A., cada vez que se realice una campaña de ventas en donde la plataforma sea responsable del descuento y será asumido por cada una de ellas, esto es de carácter obligatorio. </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DÉCIMO TERCERA: </span> <span class="title">DE LA VENTA  </span>
+        <br/>
+        <span style="text-align: justify;">El Seller únicamente podrá vender Productos originales y nuevos dentro del área de Lima Metropolitana. Además de ellos, deberá de tomar en cuenta la cláusula décima segunda sobre Política de Productos prohibidos para la venta. En caso los productos se traten de alimentos no industrializados, estos no requieren registro sanitario para la venta, sin embargo, es necesario respetar las normas y guías señaladas en la RS N°250- 2020 – MINSA. </span>
+        <br/>
+        <br/>
+        <span style="text-align: justify;">INDIGITAL XP pondrá a disposición dentro del Portal, una pasarela de pagos de los Medio de Pago Autorizado el cual permitirá al cliente cancelar el Producto o los Producto. Es importante indicar que, los pagos con tarjeta de crédito o débito están sujetas a la aprobación del Banco emisor de la tarjeta y a las validaciones internas de las pasarelas de pago encargadas de procesar la transacción. En caso donde el pago es desaprobado y/o rechazado, la orden de compra asociada será cancelada de manera automática por la pasarela de pagos.  </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DECIMO CUARTA: </span> <span class="title">POLÍTICA DE PRODUCTOS PROHIBIDOS PARA LA VENTA  </span>
+        <br/>
+        <span style="text-align: justify;">INDIGITAL XP pone a disposición del Seller el listado de Productos cuyo ofrecimiento, solicitud, publicación, compra o venta se encuentran prohibidos por INDIGITAL XP debido a sus políticas internas y/o para garantizar el cumplimiento de la ley vigente, según sea el caso.  El Seller es exclusivamente responsable de la legalidad y legitimidad de los artículos que se publican dentro del Portal. INDIGITAL XP podrá finalizar y/o dar de baja la publicación que no cumpla con las políticas aquí mencionadas.  </span>
+        <br/>
+        <br/>
+        <span style="text-align: justify;">INDIGITAL XP podrá, a sola discreción, dar de baja aquellas publicaciones que no respeten sus políticas internas, los Términos y Condiciones aquí estipulados o cualquier ley vigente. Esto podrá tener como consecuencia la inhabilitación y baja de la cuenta del Seller en el Seller Center. </span>
+        <br/>
+        <br/>
+        <span style="text-align: justify;">El Anexo 1 contiene la lista de Productos prohibidos para la venta a través de los Marketplaces. </span>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DÉCIMO QUINTA: </span> <span class="title">DEL DESPACHO</span>
+        <br/>
+        <span style="text-align: justify;">La presente clausula es exclusivamente para Sellers que solo vendan productos en los Marketplace de INDIGITAL XP. </span>
+        <br/>
+        <br/>
+        <span style="text-align: justify;">Cada Seller especificará dentro del Portal su Producto con las condiciones de envío y despacho tal y como se establecen en la cláusula sexta y novena del presente Términos y Condiciones. Para ello, el Seller deberá tomar en cuenta las siguientes especificaciones:  </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td class="title" style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">
+                    <span class="title">Despacho directo por el Seller (Dropshipping): </span>
+                    <br/>
+                    <span>El Seller realiza los despachos de los pedidos, utilizando sus propios recursos y logística, teniendo en cuenta lo siguiente:  </span>
+                    <br/>
+                    - El (los) Producto(s) deben entregarse en la fecha prometida de entrega al cliente. En ese sentido, la comunicación del Seller con el cliente para coordinar la entrega del pedido, debe realizarse, como mínimo con dos (2) días hábiles de anticipación a la fecha de entrega prometida.
+                    <br/>
+                    - El Seller queda obligado que al momento de actualizar su estado a ¨entregado¨ debe colocar evidencia o cargo de entrega en la plataforma Sellercenter para poder hacer el cambio de estado.
+                    <br/>
+                    - La comunicación entre el Seller y el cliente es estrictamente para asegurar la entrega del pedido. La comunicación por ninguna circunstancia puede tener como motivo un cambio de fecha o postergación de la fecha de entrega prometida.
+                    <br/>
+                    - El Seller es responsable de entregar el (los) Producto(s) con la documentación completa: Boleta/factura, según solicitud del cliente.
+                    <br/>
+                    - El Seller sólo despachará pedidos que estén pagados por el cliente, es decir, no deberá bajo ningún concepto, despachar pedidos pendientes de pago.
+                    <br/>
+                    - El cliente debe firmar la documentación al recibir el Producto, dejando constancia que realizó la revisión del Producto y que este se encuentra en buenas condiciones.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">
+                    <span class="title">Despacho por Empresas Transportistas contratadas por INDIGITAL XP (en adelante, “Empresa Transportista” - Exclusivo): </span>
+                    <br/>
+                    <span>El transportista recogerá el Producto en el almacén del Seller y será el responsable de entregar el producto en el domicilio del cliente final, la información de los datos del despacho deberá de ser coordinada con INDIGITAL XP un día hábil previo a la entrega. </span>
+                    <br/>
+                    - El envío de productos se lleva a cabo a través de una Empresa Transportista contratada por INDIGITAL XP.
+                    <br/>
+                    - El Seller es responsable de la actualización del estado de sus pedidos en el Seller Center. Es obligatorio que el Seller coloque el estado de “Listo para enviar” la orden, previo a la entrega del producto al Transportista. Si el Seller tuviera alguna incidencia al actualizar información debe de comunicase a través del botón Soporte en el lado inferior derecho de la plataforma Sellercenter
+                    <br/>
+                    - El Seller es responsable de cumplir con el tiempo de entrega del Producto a la Empresa Transportista.
+                    <br/>
+                    - El Seller debe respetar las condiciones y horarios de atención de las oficinas/almacén de la Empresa Transportista:
+                    <br/>
+                    - Lunes a viernes de 8:00 AM a 7:00 PM
+                    <br/>
+                    - INDIGITAL XP o cualquier empresa de IR podría decidir cambiar de Empresa Transportista, previa comunicación al Seller con el objetivo de mejorar el servicio brindado al cliente.
+                    <br/>
+                    - De presentarse pérdida de la documentación no será responsabilidad por parte de INDIGITAL XP ni de la Empresa Transportista.
+                    <br/>
+                    - La Empresa Transportista se encuentra autorizada a no recibir pedidos que no cumplan con lo indicado en los párrafos descritos.
+                    <br/>
+                    - El costo del envío será determinado por la Empresa Transportista quien cobrará a INDIGITAL XP todos los envíos del Seller. Posteriormente y de manera mensual, INDIGITAL XP procederá con la facturación de estos costos al Seller.
+                    <br/>
+                    - Es obligación del Seller incluir dentro de la facturación al Cliente, el flete por el despacho.
+                    <br/>
+                    - El Seller es responsable de entregar el (los) Producto(s) con la documentación completa, las mismas que deben de cumplir con:
+                    <br/>
+                    - <span class="title">Documentación Externa : </span>Guía automática descargada del Seller Center, una copia pegada al empaque, otra copia como cargo de recepción para la constancia de recibida por la Empresa Transportista.
+                    <br/>
+                    - <span class="title">umentación interna – dentro del empaque o embalaje:</span> Boleta o factura de ser el caso junto con la guía de remisión.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DÉCIMO SEXTA: </span> <span class="title">DE LAS DEVOLUCIONES</span>
+        <br/>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">16.1</td>
+                <td style="text-align: justify;">Las solicitudes de devoluciones podrán ser recibidas y atendidas a través de los siguientes canales: (i) Call Center </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.2</td>
+                <td style="text-align: justify;">Es obligación del Seller indicar sus políticas de devolución en cada Producto y dentro del Portal. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.3</td>
+                <td style="text-align: justify;">Las devoluciones serán atendidas dentro de los 7 días desde fecha de entrega. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.4</td>
+                <td style="text-align: justify;">INDIGITAL XP solo recibirá productos que cumplan con los términos y condiciones de cada seller y se contactará con el seller en un tiempo aprox. 24h a 72 hábiles. Está en la obligación del Seller indicar sus políticas de devolución en cada Producto y dentro del Portal. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.5</td>
+                <td style="text-align: justify;">Los productos que se reporten después de los 7 días se le dará tratamiento de servicio técnico. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.6</td>
+                <td style="text-align: justify;">Para todos los motivos de devolución, si la responsabilidad es del Seller se le considerará a descontar el monto total del pedido en la liquidación del mes a corresponder, incluyendo comisión, establecido en la cláusula décima y flete, si el Seller opera con Logística exclusiva. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.7</td>
+                <td style="text-align: justify;">Si la responsabilidad es del cliente, no se considerará cargo por comisión y flete; los cargos serán asumidos por INDIGITAL XP. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.8</td>
+                <td style="text-align: justify;">En relación al costo de devolución, la empresa de transporte realizará el envío del producto devuelto al almacén del Seller, en caso sea responsabilidad del Seller el motivo de devolución, este asumirá el costo de devolución por el cual se emitirá un comprobante de pago. De caso contrario, si es responsabilidad del cliente, INDIGITAL XP asumirá dicho costo. </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.9</td>
+                <td style="text-align: justify;">Lo señalado aplica a los motivos de devolución a continuación, con excepción de devolución “Productos con fallas” debido a que tiene otro tratamiento que serán descritos más adelante; </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.10</td>
+                <td style="text-align: justify;">Causa de devoluciones</td>
+            </tr>
+            <tr>
+                <td class="title" style="vertical-align: top;">16.10.1</td>
+                <td style="text-align: justify;">
+                    <span class="title">Entrega incompleta:</span>
+                    <br/>
+                    Se define como “Entrega Incompleta” aquellos casos donde el cliente no recibe la totalidad de productos que adquirió.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.10.2</td>
+                <td style="text-align: justify;">
+                    <span class="title">Entrega de producto errado: </span>
+                    Se define como “Producto errado” aquellos casos donde el Seller despacha productos que no fueron solicitados en la compra que efectuó el cliente.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.10.3</td>
+                <td style="text-align: justify;">
+                    <span class="title">Error en elección de producto: </span>
+                    Se define como” Error de Compra” aquellos casos donde el cliente hace elección errada de productos o cantidad en la compra.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.10.4</td>
+                <td style="text-align: justify;">
+                    <span class="title">Producto no cumple expectativas: </span>
+                    Aquellos casos donde el cliente después de realizar la compra y ya despachado el pedido, este no cumple sus expectativas y proceder a solicitar una devolución.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.10.5</td>
+                <td style="text-align: justify;">
+                    <span class="title"> Producto con fallas </span>
+                    <br/>
+                    - INDIGITAL XP sólo recibirá aquellos Productos que cumplan con las Políticas de Devolución de cada Seller.
+                    <br/>
+                    - INDIGITAL XP procederá a contactarse con el Seller dentro de las 24 a 72 horas hábiles que toma conocimiento de la solicitud de devolución.
+                    <br/>
+                    - El transportista asignado por INDIGITAL XP trasladará el Producto a los almacenes del Seller siendo ello así, es responsabilidad del transportista confirmar que el Producto ya fue dejado en el almacén del Seller. El costo de este traslado, será asumido por el Seller por el cual se emitirá comprobante de pago, en la medida que la devolución corresponda a causas imputables al Seller. De lo contrario, serán asumido por INDIGITAL XP.
+                    <br/>
+                    - El Seller contará con un plazo máximo de 48 horas hábiles para brindar un diagnóstico documentado del estado del Producto, después de haber recibido el Producto.
+                    <br/>
+                    - En caso la marca del producto pertenezca a un tercero, el Seller es responsable de enviarlo a su almacén para su verificación y/o evaluación del producto fallado.
+                    <br/>
+                    <br/>
+                    El Seller sólo podrá dar como resultado final las siguientes opciones: (i) Devolución aprobada; o, (ii) Devolución rechazada.
+                    <br/>
+                    <br/>
+                    <span style="text-decoration: underline;">(i) Devolución Aprobada:</span> El Seller deberá comunicar la aceptación de la devolución al área de post venta del Marketplace (operaciones_postventa@indigitalxp.pe)  quien contará con 24 horas hábiles, para contactarse con el cliente. Así mismo, se le considerará cargo por comisión establecida en la cláusula décima y flete, si el seller opera con Logística exclusiva.
+
+                    <span style="text-decoration: underline;">(ii) Devolución rechazada:</span> El Seller deberá de comunicar su decisión al área de post venta del Marketplace (operaciones_postventa@indigitalxp.pe) adjuntando el informe documentado respectivo. El área de post venta contará con 24 horas hábiles para contactarse con el cliente.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">16.11</td>
+                <td style="text-align: justify;">
+                    <span class="title">De los costos por devolución: </span>
+                    <br/>
+                    El costo de traslado del Producto del cliente o tiendas INDIGITAL XP hacia el almacén del Seller, será establecido por las empresas transportador en función al peso del producto y zona a considerar.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <div style="text-align: justify; width: 700px;">
+        <span class="title" style="text-decoration: underline;">DÉCIMO SETIMA: </span> <span class="title">DE LAS CANCELACIONES DE COMPRA </span>
+        <br/>
+        <span>Las cancelaciones de compras se podrán dar en los siguientes supuestos: </span>
+        <table class="no-spacing" width="700px">
+            <tr>
+                <td style="vertical-align: top;">a)</td>
+                <td style="text-align: justify;">
+                    Cancelaciones por responsabilidad del Seller:
+                    <br/>
+                    - Por <span class="title">quiebre de stock y no cuenta con productos</span> para abastecer las órdenes de compra, el Seller deberá cancelar la(s) orden(es) de compra de manera inmediata.
+                    <br/>
+                    - Por <span class="title">incumplimiento de entrega</span>, casos donde el Seller no cumple con entregar los productos al cliente final por diversos factores. Debe de comunicarlo de manera inmediata a INDIGITAL XP.
+                    <br/>
+                    - Por <span class="title">entrega tardía</span>, el Seller despacha el pedido fuera del plazo establecido y el cliente final lo rechaza.
+                    <br/>
+                    - Por error en <span class="title">descripción del producto y/o servicio</span>, el Seller no especifica correctamente las características del producto.
+                    <br/>
+                    - Por error en precio del <span class="title">producto y/o servicio.</span>
+                    <br/>
+                    - En estos supuestos, el Seller quedará obligado al pago de la comisión detallada en la cláusula décima y penalidad detallado en la cláusula décimo novena.
+                    <br/>
+                    - De haberse concretado una venta, el monto del flete será asumida por el Seller, si opera con Logistica exclusiva, se emitirá comprobante de pago. Así mismo, debe de comunicarlo de manera inmediata a INDIGITAL XP para que éste proceda a anular la compra. El punto señalada solo es aplicable en venta de productos.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">b)</td>
+                <td style="text-align: justify;">
+                    Cancelaciones por parte del Cliente:
+                    <br/>
+                    - <span class="title">Por desistimiento de compra</span>, el cliente puede anular la compra si cumple con expectativas y no está conforme con el precio, plazo de entrega, y/o características del pedido.
+                    <br/>
+                    - <span class="title">Por cliente ausente y sin contacto “Entrega fallida”</span>, se define cuando el Seller o la Empresa Transportista, según corresponda, no logre en hasta dos oportunidades hacer el despacho de los Productos en el domicilio indicado por el cliente.
+                    <br/>
+                    - Cuando la entrega sea bajo la modalidad Dropshipping (Despacho directo por el Seller) y se presente un caso de Entrega Fallida, el producto retornará al almacén del Seller.
+                    <br/>
+                    - Cuando la entrega sea bajo la modalidad de Logistica exclusiva, el producto será entregado al Seller por la empresa Transportista en un plazo de 48 horas hábiles de la entrega fallida
+                    <br/>
+                    - <span class="title">Por dirección insuficiente</span>, cuando el transportista o Seller no halla la dirección del cliente final.
+                    <br/>
+                    - <span class="title">Por despacho rechazado</span>, se considera cuando el cliente final rechaza el/los productos por motivos no relacionados a la responsabilidad del Seller.
+                    <br/>
+                    - Estos supuestos no generarán la comisión detallada en la cláusula décima a cargo del Seller.
+                    <br/>
+                    - De haberse concretado una venta, el monto del flete será asumida INDIGITAL XP.
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">c)</td>
+                <td style="text-align: justify;">
+                    Cancelaciones por parte de INDIGITAL XP:
+                    <br/>
+                    - INDIGITAL XP procederá a cancelar las compras cuando se presenten errores en el Seller Center.
+                    <br/>
+                    - Estos supuestos no generarán la comisión detallada en la cláusula décima, a cargo del Seller.
+                    <br/>
+                    - En casos de Fraude, señalados por el cliente estos serán comunicados al Seller y cargos serán asumidos por INDIGITAL XP.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">DÉCIMO OCTAVA: </span> <span class="title">DE LAS GARANTIAS </span>
+    <br/>
+    <span>La presente clausula es exclusivamente para Sellers que solo vendan productos en los Marketplace de INDIGITAL XP. </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">a)</td>
+            <td style="text-align: justify;">El Seller deberá remitir en un plazo máximo de siete (07) días desde suscritos los presentes Términos y Condiciones, las condiciones de garantía de sus productos en formato Word, caso contrario, los productos quedarán sujetos a la garantía indicada en INDIGITAL XP, la cual deberá ser cumplida por el Seller. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">b)</td>
+            <td style="text-align: justify;">Todo producto comercializado por el Seller debe tener garantía.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">c)</td>
+            <td style="text-align: justify;">La garantía del producto inicia desde que el producto es adquirido por el cliente. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">d)</td>
+            <td style="text-align: justify;">Todos los productos deben de indicar el plazo de la garantía. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">e)</td>
+            <td style="text-align: justify;">De detectarse un error de fábrica y no es posible realizar la reparación y/o cambio del producto, el Seller anulará la venta del cliente en el Seller Center y emitirá una nota de crédito a INDIGITAL XP. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">f)</td>
+            <td style="text-align: justify;">INDIGITAL XP brindará los datos del Seller a los clientes de Lima, para que se acerquen a valer su garantía </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">g)</td>
+            <td style="text-align: justify;">Los gastos logísticos generados para el traslado de los productos al Seller, serán asumidos por el Seller, con excepción de aquellos casos donde el servicio técnico emita un diagnostico alegando – de manera sustentada- que la falla se deba a un mal uso por parte del cliente. En estos supuestos, INDIGITAL XP asumirá en primera instancia los gastos, quedando facultado de trasladar el costo al cliente.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">h)</td>
+            <td style="text-align: justify;">Luego de recibido el producto por parte del Seller, éste cuenta con un plazo de 7 días calendarios para brindar un diagnóstico sobre el estado del Producto. Cumplido el plazo antes indicado y sin que el Seller brinde una respuesta, INDIGITAL XP tendrá la potestad de proceder con el cliente reembolsándole el monto pagado; y, INDIGITAL XP procederá a descontar el importe del precio de venta del producto al Seller en su facturación. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">i)</td>
+            <td style="text-align: justify;">El Seller emitirá un informe técnico sustentado y firmado en el que detalle el nombre del producto, modelo, serie y diagnóstico, el cual deberá ser enviado al correo operaciones_postventa@indigitalxp.pe. De igual manera los accesorios y documentación que fueron recibidos. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">j)</td>
+            <td style="text-align: justify;">En los casos que el cliente extravié el comprobante de compra del producto, el Seller está en la obligación de facilitar una copia de la documentación con validez para que el cliente pueda hacer uso del servicio de garantía. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">k)</td>
+            <td style="text-align: justify;">El Seller tiene un plazo máximo de 30 días calendario para reparar el producto, de necesitar mayor tiempo, deberá de solicitar al cliente y/o a INDIGITAL XP, un aplazamiento. </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">DÉCIMO NOVENA: </span> <span class="title">DE LAS PENALIDADES  </span>
+    <br/>
+    <span>El Seller está de acuerdo en aceptar las penalidades establecidas en la presente cláusula.  </span>
+    <br/>
+    <span>Si en caso el Seller es reiterativo en incurrir en los incumplimientos señalados, INDIGITAL XP tendrá plena facultad de negar el uso de la Herramienta Seller Center por los daños,
+        problemas o faltas, y procederá a dar de baja al Seller del Marketplace. Las penalidades son sin perjuicio del deber del Seller de cumplir el contrato, del derecho de INDIGITAL XP de resolverlo conforme a sus estipulaciones, y del deber del Seller de indemnizar el daño anterior si lo hubiere. </span>
+    <br/>
+    <br/>
+    <span>A continuación, se detallan las causas y cuantías de las penalidades:</span>
+    <br/>
+    <br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td class="title" style="vertical-align: top;">A.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por despacho no realizado </span>
+                <br/>
+                Por cancelaciones de parte del Seller se procederá a cobrar la comisión por la orden generada y además los siguientes montos, dependiendo del motivo en específico:
+                <br/>
+                - <span class="title">Por quiebre de stock de Orden: </span>
+                <br/>
+                En caso el Seller cancele la o las ordenes desde Seller Center por falta de stock, se incurrirá en cargos adicionales por 2.5 veces del valor de la comisión pactada por la categoría del producto y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+                <br/>
+                - <span class="title">Por incumplimiento de entrega: </span>
+                <br/>
+                En caso el Seller no entregue el pedido al cliente final, se incurrirá en cargos adicionales por 2.5 veces del valor de la comisión pactada por la categoría del producto y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">B.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por problemas del producto: </span>
+                <br/>
+                Correspondiente a la falta de calidad, idoneidad, inocuidad, autenticidad y legalidad del producto, entre otros problemas del producto ofrecido o del servicio de venta, conforme a la cláusula 12.1 y demás pertinentes del presente contrato, y a la afectación que pudiera surgir ante un Reclamo y/o Denuncia/demanda Administrativa o Judicial, conforme al presente contrato el Seller asumirá íntegramente toda responsabilidad derivada de reclamos de clientes y de las acciones y pronunciamientos (multas, medidas correctivas, entre otras) emitidos por el Instituto Nacional de Defensa de la Competencia y de la Protección de la Propiedad Intelectual (INDECOPI) y por cualesquiera otra entidad competente, en relación con situaciones de cancelación arbitraria del pedido o compra, error de precio, error en descripción del producto, información defectuosa, publicidad engañosa, productos no idóneos, productos no inocuos, productos no auténticos, productos falsificados, productos prohibidos, productos ilegales o que no cumplen los requisitos legales, gastos relacionados a reembolsos, pago de costas y costos procesales, pago de costos del procedimiento de logística inversa, así como adquisiciones vía externas (hunting) y/o cupones de compensación al cliente.                <br/>
+                <br/>
+                Sin perjuicio de lo anterior, se procederá a cobrar al Seller la comisión por la orden generada y como penalidad cargos adicionales por el 50% del monto del producto(s), y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">C.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por entrega tardía </span>
+                <br/>
+                En caso el Seller no entregue el pedido en el plazo establecido, se procederá a cobrar la comisión por la orden generada más un porcentaje del monto del producto, dependiendo del motivo en específico:
+                <br/>
+                <br/>
+                - <span class="title">Inicio de manejo tardío </span>
+                <br/>
+                <br/>
+                En caso el Seller no inicie manejo del pedido en los plazos establecidos, incurrirá en cargos adicionales dependiendo el precio del producto (Revisar tabla de penalidades) y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+                <br/>
+                El Seller debe iniciar el manejo máximo dentro de las próximas 24 horas hábiles desde que ingresa el pedido en caso pertenezca a la modalidad de despacho propio o tenga forma de entrega “retiro en tienda”. Si el pedido tiene forma de entrega “envío a domicilio”, el Seller debe validar la dirección y el tiempo estimado de entrega del pedido para identificar si debe iniciar el manejo las próximas 24 horas hábiles o 4 días hábiles antes de la fecha de entrega. En caso el pedido tenga forma de entrega “envío express”, el Seller siempre debe iniciar el manejo máximo a la 1 p.m. del mismo día en el que ingresa el pedido.
+                <br/>
+                El seller debe tener en cuenta que los plazos aplican en días hábiles. Si el pedido ingresa sábado, domingo o feriado calendario, se empiezan a contar los plazos para la gestión desde el día lunes. Siguiendo esta premisa, el sábado, domingo o feriado calendario tampoco se consideran en el plazo de inicio de manejo indicado como “máximo 4 días hábiles antes de la fecha de entrega”.
+                <br/>
+                <br/>
+                <div style="text-align:center;margin-top:10px;">
+                    <table width="600px" style="margin: 0 auto; border: 1px solid black;border-collapse: collapse">
+                        <tr class="title">
+                            <th style="border: 1px solid black;">Modalidad</th>
+                            <th style="border: 1px solid black;">Forma de entrega</th>
+                            <th style="border: 1px solid black;">Dirección entrega</th>
+                            <th style="border: 1px solid black;">Tiempo estimado entrega</th>
+                            <th style="border: 1px solid black;">Plazo para inicio de manejo seller</th>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Courier Intercorp</td>
+                            <td style="border: 1px solid black;">Retiro en tienda </td>
+                            <td style="border: 1px solid black;">Lima y provincia </td>
+                            <td style="border: 1px solid black;">Todos </td>
+                            <td style="border: 1px solid black;">Máximo dentro de las próximas 24 horas hábiles desde que ingresa el pedido </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Courier Intercorp </td>
+                            <td style="border: 1px solid black;">Envío a domicilio </td>
+                            <td style="border: 1px solid black;">Lima </td>
+                            <td style="border: 1px solid black;">Entre 2 a 4 días hábiles </td>
+                            <td style="border: 1px solid black;">Máximo dentro de las próximas 24 horas hábiles desde que ingresa el pedido </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Courier Intercorp </td>
+                            <td style="border: 1px solid black;">Envío a domicilio </td>
+                            <td style="border: 1px solid black;">Lima </td>
+                            <td style="border: 1px solid black;">Más de 4 días hábiles </td>
+                            <td style="border: 1px solid black;">Máximo 4 días hábiles antes de la fecha de entrega </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Courier Intercorp </td>
+                            <td style="border: 1px solid black;">Envío a domicilio </td>
+                            <td style="border: 1px solid black;">Provincia </td>
+                            <td style="border: 1px solid black;">Todos </td>
+                            <td style="border: 1px solid black;">Máximo dentro de las próximas 24 horas hábiles desde que ingresa el pedido </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Courier Intercorp </td>
+                            <td style="border: 1px solid black;">Envío express </td>
+                            <td style="border: 1px solid black;">Lima </td>
+                            <td style="border: 1px solid black;">0 </td>
+                            <td style="border: 1px solid black;">Máximo a la 1 p.m. del mismo día en el que se ingresa el pedido </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">Despacho propio </td>
+                            <td style="border: 1px solid black;">Envío a domicilio </td>
+                            <td style="border: 1px solid black;">Lima y provincia </td>
+                            <td style="border: 1px solid black;">Todos </td>
+                            <td style="border: 1px solid black;">Máximo dentro de las próximas 24 horas hábiles desde que ingresa el pedido </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                <br/>
+
+                Tabla de penalidades:
+                <br/>
+                <div style="text-align:center;margin-top:10px;">
+                    <table width="600px" style="margin: 0 auto; border: 1px solid black;border-collapse: collapse">
+                        <tr class="title">
+                            <th style="border: 1px solid black;">Precio del producto</th>
+                            <th style="border: 1px solid black;">% Penalidad</th>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">S/0 a S/250</td>
+                            <td style="border: 1px solid black;">25% sobre el precio del producto C/IGV </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">S/251 a S/999</td>
+                            <td style="border: 1px solid black;">20% sobre el precio del producto C/IGV </td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid black;">S/1000 a +</td>
+                            <td style="border: 1px solid black;">15% sobre el precio del producto C/IGV </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/>
+                - <span class="title">A la empresa transportadora </span>
+                <br/>
+                <br/>
+                En caso el Seller no entregue el pedido a la empresa transportadora en la fecha establecida, incurrirá en cargos adicionales por el costo del falso flete por parte del Operador Logístico por cada intento de recojo fallido que sea responsabilidad del Seller.
+                <br/>
+                Se considera responsabilidad del Seller si el Operador Logístico va dentro de los horarios de atención establecidos y el Seller no entrega el pedido.
+                <br/>
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">D.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por entrega incompleta </span>
+                <br/>
+                En caso el Seller no entregue el pedido completo, este asumirá todos los costos relacionados a la logística inversa que conciernen a la entrega total del pedido.
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">E.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por error en cambio de estado </span>
+                <br/>
+                En caso el Seller no coloque el estado correcto en la plataforma Seller Center, se procederá a cobrar la comisión por la orden generada más el 20% del monto del producto y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">F.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por devoluciones de productos </span>
+                <br/>
+                En caso exista una devolución de productos debido a que el seller entregó un producto erróneo en color o con una pieza faltante, los costos logísticos de recojo del producto y envío al cliente serán asumidos por el seller.
+                <br/>
+                <br/>
+                En caso el cliente devuelva el producto por entrega fuera de tiempo se cobrará al seller los gastos logísticos de retorno a su almacén.
+            </td>
+        </tr>
+        <tr>
+            <td class="title" style="vertical-align: top;">G.</td>
+            <td style="text-align: justify;">
+                <span class="title" style="text-decoration: underline;">Por Comprobantes de Pago </span>
+                <br/>
+                De acuerdo a las disposiciones emitidas por la SUNAT mediante la Resolución de Superintendencia No. 000128-2021/SUNAT 2, todos los contribuyentes deben emitir comprobantes de pago electrónicos y dejar de emitir factura y boletas de venta físicas.
+                <br/>
+
+                En caso el seller no coloque el comprobante de pago (Boleta de venta o Factura) dentro de la plataforma de Sellercenter en la opción Comprobante que se encuentra en cada orden de compra; y un cliente realice un reclamo, el área de postventa se comunicará con el seller y este tendrá un lapso de dos días hábiles para colocarlo en la plataforma.
+                <br/>
+
+                En caso el seller no coloque el comprobante dentro de la plataforma se incurrirá en cargos adicionales por 1 vez el valor de la comisión pactada por la categoría del producto y se descontará del monto total a depositar del mes en que se suscite la penalidad.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGESIMA: </span> <span class="title">PLAZO DEL CONTRATO  </span>
+    <br/>
+    <span>Las Partes dejan constancia que los presentes Términos y Condiciones aquí establecidos tienen una duración indeterminada.  </span>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGESIMO PRIMERA: </span> <span class="title">CONFIDENCIALIDAD </span>
+    <br/>
+    <span>El Seller reconoce y acepta que la información que recibe sobre el Servicio Marketplace, su diseño de marketing, el software, el Portal, información no conocida del público, y toda otra aquella información que le sea proporcionada por INDIGITAL XP bajo el carácter de confidencial, es información confidencial de propiedad exclusiva de INDIGITAL XP, que el Seller debe utilizar de manera razonable y exclusivamente para los fines contenidos en estos términos y condiciones, y no podrá apropiársela, copiarla, utilizarla por fuera de la relación que mantiene con INDIGITAL XP, ni divulgarla en forma alguna. Dicha información incluye, sin limitarse a ella, a información financiera, comercial, virtual, técnica, métodos, información de clientes –como son sus datos personales- u otros Seller y subcontratistas, entre otras. El Seller no hará publicidad alguna utilizando el nombre o marcas registradas de INDIGITAL XP ni de las empresas de IR y/o sus subsidiarias. Salvo autorización expresa y escrita se abstendrá de: (i) comentar, discutir, o dar a conocer de cualquier manera dicha información confidencial a terceros no autorizados, entre otros, a funcionarios, empleados o contratistas de compañías competidoras de INDIGITAL XP, (ii) usar, explotar o comercializar dicha información confidencial, directa o indirectamente o en forma alguna para su propio beneficio o para el beneficio de terceros, y (iii) revelar o divulgar dicha información confidencial a personas, organismos, entidades, por razón o propósito alguno, a menos que sea expresamente autorizado por INDIGITAL XP y para el cumplimiento del objeto del Servicio Marketplace y de estos términos y condiciones. Si el Seller no cumple la obligación de confidencialidad aquí prevista, directa o indirectamente, será responsable por la totalidad de los daños y perjuicios que se le causen a INDIGITAL XP, por tal causa, por lo que deberá sacarlo en paz y a salvo. Esta obligación vincula a directivos, empleados, dependientes, contratistas y compañías subsidiarias y afiliadas del Seller y regirá con posterioridad a la terminación de este Contrato. </span>
+    <br/>
+    <span>En el caso de que INDIGITAL XP sea requerido por autoridad administrativa o judicial competente, a efecto de que proporcione cualquier “Información Confidencial”, notificará deberá notificar dicha situación al Seller, con el objeto de que éste último esté en condiciones de realizar aquellos actos que a su derecho convengan, incluyendo la obtención de una orden de protección adecuada, medida precautoria u otros recursos apropiados, a fin de prevenir la divulgación de la “Información Confidencial”. </span>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGESIMO SEGUNDA: </span> <span class="title">PROTECCIÓN DE DATOS PERSONALES  </span>
+    <br/>
+    <span>Las partes declaran expresamente conocer los alcances de la Ley N° 29733, Ley de Protección de Datos Personales, y de su Reglamento aprobado por Decreto Supremo N° 003-2013-JUS, por lo que asumen las responsabilidades que puedan corresponderle derivadas de la legislación vigente sobre protección de datos de carácter personal.  </span>
+    <br/>
+    <br/>
+    <span>Sin perjuicio de las obligaciones establecidas en Ley N° 29733 y su Reglamento, las partes se obligan a lo siguiente:  </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">a)</td>
+            <td style="text-align: justify;">Utilizar o aplicar la información personal proporcionada por las partes exclusivamente para la realización de los fines establecidos en el presente Términos y Condiciones. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">b)</td>
+            <td style="text-align: justify;">No comunicar, traspasar o proporcionar la información personal proporcionada por las partes a otras personas, ni duplicar o reproducir toda o parte de la información. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">c)</td>
+            <td style="text-align: justify;">Asegurarse de que los datos sean manejados únicamente por aquellos empleados cuya intervención sea necesaria para la prestación de los servicios propios del presente Términos y Condiciones, con sujeción al secreto profesional y confidencialidad. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">d)</td>
+            <td style="text-align: justify;">Admitir los controles y auditorias que las partes requieran a efectos de verificar el cumplimiento de lo establecido en el presente documento.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">e)</td>
+            <td style="text-align: justify;">Si, por cualquier motivo se resuelve la relación contractual, las partes deberán destruir la información o devolverlos sin conservar ninguna copia, cuando alguna de las partes lo solicite.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">f)</td>
+            <td style="text-align: justify;">Custodiar la información, a través de las medidas de seguridad, legalmente exigibles, de índole técnica y organizativa que garanticen la seguridad de los mismos, evitando su alteración, pérdida, tratamiento o acceso no autorizado.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">g)</td>
+            <td style="text-align: justify;">Las partes se hacen responsables frente a la otra, de cualquier reclamo, denuncia, proceso judicial, proceso administrativo u otro iniciado contra alguna de ellas como motivo del incumplimiento de cualquiera de las obligaciones de las partes pactadas en este artículo. La parte responsable asumirá las costas y costos correspondientes, asumiendo cualquier monto por daños o perjuicios, indemnizaciones, multas, u otras sanciones que pudiera recibir.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">h)</td>
+            <td style="text-align: justify;">En el supuesto que alguna de las partes cumpla con las obligaciones establecidas en este contrato utilizando una base de datos personales que haya sido recogida u obtenida directamente por ella misma, la parte recaudadora de información se obliga a recabar el consentimiento del titular de datos personales para su tratamiento y traspaso, de acuerdo a la legislación vigente de Protección de Datos Personales.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">i)</td>
+            <td style="text-align: justify;">El incumplimiento de cualquiera de las obligaciones establecidas en el presente artículo será causal de resolución automática del presente Contrato.  </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">j)</td>
+            <td style="text-align: justify;">Es importante indicar que, el Seller proporciona por voluntad propia a INDIGITAL XP sus datos y acepta que éste pueda transferirlos con los cuidados necesarios para la realización del negocio si fuera el caso.  </td>
+        </tr>
+    </table>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGESIMO TERCERA: </span> <span class="title">Cláusula Anticorrupción </span>
+    <br/>
+    <span>El Seller reconoce que la INDIGITAL XP y las empresas de IR mantienen relaciones contractuales con éste, sobre la base de varios factores, incluyendo, entre otros, el buen nombre del Seller.</span><br/>
+    <span>En tal virtud, el Seller declara que sus recursos no provienen ni se destinan al ejercicio de ninguna actividad ilícita, incluyendo, pero sin limitarse a actos de corrupción (colusión, cohecho, tráfico de influencias y corrupción en el ámbito privado), lavado de activos o financiamiento del terrorismo; y que tanto el Seller, como sus socios, administradores, trabajadores y/o agentes que actúen por cuenta o en interés del Seller, conocen y cumplen con la normativa aplicable relacionada a la prevención de actos de corrupción en el ámbito público y privado, lavado de activos y financiamiento del terrorismo.  </span><br/>
+    <span>Asimismo, el Seller se compromete expresamente a cumplir con lo detallado en el Código de Conducta de Intercorp Retail y subsidiarias, cuyos alcances comprenden, entre otras, a la INDIGITAL XP, y cuyo contenido consta en el link web: Código de Ética Intercorp Retail, que el Seller declara expresamente haber leído, conocer y aceptar con la sola suscripción del presente Contrato. En virtud a ello, el Seller declara y acuerda que en todas sus relaciones con la INDIGITAL XP cumplirá con este Código y dispondrá que sus directores, funcionarios y empleados, así con cualquier otra persona o entidad que actúe en su nombre, cumpla con lo establecido en el mismo.  </span><br/>
+    <span>Durante la vigencia del presente Contrato, el Seller se obliga a cumplir con todas las disposiciones legales vigentes establecidas en la legislación en materia de prevención de actos de corrupción en el ámbito público y privado, lavado de activos y financiamiento del terrorismo, y tomará todas las medidas necesarias para que sus socios, administradores, trabajadores y/o agentes que actúen por cuenta o en interés del Seller cumplan con dichas disposiciones legales. Adicionalmente, el Seller se compromete a cumplir, y tomará todas las medidas necesarias para que sus socios, administradores, trabajadores y/o agentes que actúen por cuenta o en interés del Seller, cumplan con todas aquellas normas establecidas en los procedimientos y regulaciones internas de la Seller, incluyendo aquellas en materia de prevención de actos de corrupción en el ámbito público o privado, lavado de activos y financiamiento del terrorismo, llevando a cabo todas las medidas necesarias y convenientes a fin de prevenir y evitar cualquier riesgo, peligro o incumplimiento en dichas materias.   </span><br/>
+    <span>El Seller se obliga a proporcionar a la INDIGITAL XP o a sus auditores externos la información y documentación que estos puedan requerir a fin de verificar el cumplimiento por parte del Seller de la legislación vigente en materia de prevención de actos de corrupción en el ámbito público y privado, lavado de activos y financiamiento del terrorismo, comprometiéndose a cooperar plenamente con el desarrollo de dicha verificación. </span><br/>
+    <!--<span>Asimismo, el Seller se compromete expresamente a cumplir con lo detallado en el Código de Conducta de Intercorp Retail y subsidiarias, cuyos alcances comprenden, entre otras, a la INDIGITAL XP, y cuyo contenido consta en el link web: Código de Ética Intercorp Retail, que el Seller declara expresamente haber leído, conocer y aceptar con la sola suscripción del presente Contrato. En virtud a ello, el Seller declara y acuerda que en todas sus relaciones con la INDIGITAL XP cumplirá con este Código y dispondrá que sus directores, funcionarios y empleados, así con cualquier otra persona o entidad que actúe en su nombre, cumpla con lo establecido en el mismo.  </span><br/>
+    <span>Durante la vigencia del presente Contrato, el Seller se obliga a cumplir con todas las disposiciones legales vigentes establecidas en la legislación en materia de prevención de actos de corrupción en el ámbito público y privado, lavado de activos y financiamiento del terrorismo, y tomará todas las medidas necesarias para que sus socios, administradores, trabajadores y/o agentes que actúen por cuenta o en interés del Seller cumplan con dichas disposiciones legales. Adicionalmente, el Seller se compromete a cumplir, y tomará todas las medidas necesarias para que sus socios, administradores, trabajadores y/o agentes que actúen por cuenta o en interés del Seller, cumplan con todas aquellas normas establecidas en los procedimientos y regulaciones internas de la Seller, incluyendo aquellas en materia de prevención de actos de corrupción en el ámbito público o privado, lavado de activos y financiamiento del terrorismo, llevando a cabo todas las medidas necesarias y convenientes a fin de prevenir y evitar cualquier riesgo, peligro o incumplimiento en dichas materias.   </span><br/>
+    <span>El Seller se obliga a proporcionar a la INDIGITAL XP o a sus auditores externos la información y documentación que estos puedan requerir a fin de verificar el cumplimiento por parte del Seller de la legislación vigente en materia de prevención de actos de corrupción en el ámbito público y privado, lavado de activos y financiamiento del terrorismo, comprometiéndose a cooperar plenamente con el desarrollo de dicha verificación. </span><br/>-->
+    <br/>
+    <span>INDIGITAL XP respeta y promueve la libre y leal competencia en el mercado, por lo que adopta sus decisiones comerciales de manera autónoma e independiente. Con la suscripción del presente contrato se reconoce que las Partes basan sus relaciones comerciales en principios éticos, sustentados en la buena fe, confianza mutua, lealtad comercial y profesionalismo, atributos esperados en toda economía de libre mercado y que por ende su cultura empresarial, bajo ninguna circunstancia acepta o apoya cualquier tipo de acción u omisión que pueda presuponer una limitación a la defensa de la libre y leal competencia. </span><br/>
+    <br/>
+    <span>En virtud de la importancia que tiene para las Partes la Libre Competencia, manifestado especialmente en sus respectivos políticas y reglamentos internos, las Partes se obligan a: i) No realizar cualquier hecho, acto o convención que impida, restrinja o entorpezca la Libre Competencia. ii) aceptar en su calidad de agentes económicos independientes, que cada una tiene la libertad de desarrollar las estrategias comerciales que estimen convenientes, según su propia política comercial. iii) Las Partes se comprometen a no realizar prácticas predatorias o de competencia desleal, realizadas con el objeto de alcanzar, mantener o a incrementar su posición dominante. En este sentido, ambas partes exigen a todos sus proveedores que mantengan relaciones independientes y autónomas con cada uno de sus clientes. </span><br/>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGÉSIMO CUARTA: </span> <span class="title">RETIRO EN TIENDA </span>
+    <br/>
+    <span>El Seller también tendrá la opción de ofrecer a sus clientes la modalidad de retiro en tienda, a efectos que dichos clientes acudan a determinadas tiendas de IR a recoger los productos que han adquirido del Seller. </span><br/>
+    <br/>
+    <span>En caso el Seller utilice la modalidad de retiro en tienda, Indigital XP le cobrará un monto de S/ 4.00 (cuatro soles) por cada pedido ingresado bajo dicha modalidad en tiendas de Lima y Callao y S/ 8.00 para tiendas en provincias. Dicho monto incluye los siguientes servicios: </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">a)</td>
+            <td style="text-align: justify;">Traslado del pedido desde el almacén del Seller hasta la tienda de IR. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">b)</td>
+            <td style="text-align: justify;">Personal encargado de acomodar los pedidos y entregar los mismos a los clientes del Seller. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">c)</td>
+            <td style="text-align: justify;">Costo de almacenamiento de los pedidos dentro de las tiendas de IR. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">d)</td>
+            <td style="text-align: justify;">Devolución del pedido al Seller en caso el cliente no lo haya recogido de la tienda de IR dentro de los plazos establecidos, que a la fecha son los siguientes:
+                <br/>
+                - Real Plaza: 7 días calendario
+                <br/>
+                - Promart: 7 días calendario
+                <br/>
+                - Oechsle: 7 días calendarios
+                <br/>
+                - Plaza Vea: 7 días non food y 3 días food, calendarios
+            </td>
+        </tr>
+    </table><br/>
+    <span>En caso el Seller supere los 300 pedidos bajo la modalidad de retiro en tienda, IR le cobrará un monto de S/ 3.50 (tres soles y medio) por cada pedido ingresado bajo dicha modalidad. </span><br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGÉSIMO QUINTA: </span> <span class="title">LEGISLACIÓN APLICABLE Y SOLUCIÓN DE CONTROVERSIAS </span>
+    <br/>
+    <span>El Contrato estará sujeto a las leyes de la República del Perú. Toda controversia entre las partes derivada de este Contrato será resuelta mediante arbitraje de derecho, por un árbitro único, que será resuelto conforme al Reglamento de Arbitraje del Centro de Arbitraje de la Cámara de Comercio de Lima, a cuyas normas y lineamientos las partes se someten de forma incondicional y declaran conocer. </span>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGÉSIMO SEXTA: </span> <span class="title">CESIÓN DE DERECHOS Y/O POSICIÓN CONTRACTUAL </span>
+    <br/>
+    <span>INDIGITAL XP podrá ceder a favor de cualquier tercero, total o parcialmente y en cualquier momento, su posición contractual en el presente contrato, así como los derechos y/o obligaciones derivados del mismo, para lo cual dará oportuno aviso al Seller. Para tales efectos, por el presente acto el Seller brinda su conformidad anticipada. </span>
+    <br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGÉSIMO SÉTIMA: </span> <span class="title">SELLERS PERÚ PASIÓN </span>
+    <br/>
+    <span>Esta cláusula sólo resulta aplicable para el caso en que el Seller califique como Seller que forma parte del programa Perú Pasión. Ella contiene las condiciones que celebran INDIGITAL XP y el Seller en el marco del programa Perú Pasión. El incumplimiento de las mismas por parte del Seller derivará en el retiro del Seller del programa Perú Pasión, así como de los beneficios y condiciones asociados a ello. </span>
+    <br/>
+    <span>El Seller declara cumplir los siguientes requisitos obligatorios señalados por el equipo organizador: </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">a)</td>
+            <td style="text-align: justify;">La empresa debe tener un mínimo de 13 meses de antigüedad (desde el momento de la constitución). </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">b)</td>
+            <td style="text-align: justify;">La empresa debe estar registrada con RUC 20 (Registro único de contribuyentes jurídicos) o RUC 10 (Registro único de contribuyentes naturales) a excepción de RUS (este tipo de contribuyente no puede participar del programa). </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">c)</td>
+            <td style="text-align: justify;">La empresa debe tener una venta anual mínima de S/120 mil y máximo de S/6 millones. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">d)</td>
+            <td style="text-align: justify;">La empresa cuenta con facturación electrónica. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">e)</td>
+            <td style="text-align: justify;">La empresa cuenta con presencia en medios digitales (redes sociales, website, entre otros). </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">f)</td>
+            <td style="text-align: justify;">La empresa comercializa productos fabricados en Perú (no importados). </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">g)</td>
+            <td style="text-align: justify;">La empresa genera impacto social o ambiental con su modelo de negocio cumpliendo al menos 1 de las siguientes actividades:
+                <br/>
+                - Trabaja y/o beneficia a una población vulnerable: personas con discapacidad, comunidades indígenas, afrodescendientes y amazónicas, migrantes, miembros de la comunidad LGBTIQ+ y que estén en proceso de reinserción a la sociedad.
+                <br/>
+                - Dona un % de sus ganancias a una ONG/causa social.
+                <br/>
+                - El producto cuenta con insumos locales (superfood, artesanías, telares andinos, entre otros).
+                <br/>
+                - Cuenta con certificaciones y/o pertenece a una red que valide su modelo de impacto social (Certificación Empresa B, Presente, Ranking PAR, Red Kunan).
+                <br/>
+                - El empaque de su producto es reciclable, reutilizable y/o compostable.
+                <br/>
+                - El empaque y/o el producto cuenta con insumos reciclados.
+                <br/>
+                - El negocio desarrolla prácticas de ecoeficiencia y reciclaje en sus operaciones.
+                <br/>
+                - El negocio cuenta con buenas prácticas a favor del cuidado y protección de la biodiversidad: reforestación, respeto y protección a especies en peligro de extinción, respeto a espacios de conservación natural, entre otros.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">h)</td>
+            <td style="text-align: justify;">El Seller acepta participar de auditorías aleatorias con el fin de validar el cumplimiento de los requisitos previamente expuestos. Estas auditorías podrán ser ejecutadas por IR Management S.R.L o por INDIGITAL XP. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">i)</td>
+            <td style="text-align: justify;">El Seller acepta participar de las campañas comerciales que se desarrollen en el marco del programa Perú Pasión, las mismas que serán previamente comunicadas vía correo electrónico. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">j)</td>
+            <td style="text-align: justify;">El Seller acepta colaborar activamente con la entrega de material gráfico, visual y testimonial para actividades de difusión del programa Perú Pasión. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">k)</td>
+            <td style="text-align: justify;">El Seller autoriza la difusión en medios digitales, masivos y físicos del material gráfico que previamente otorgue a los organizadores del programa con el objetivo de dar a conocer el programa Perú Pasión. </td>
+        </tr>
+    </table><br/>
+    <br/>
+    <span class="title" style="text-decoration: underline;">VIGÉSIMO OCTAVA: </span> <span class="title">COMPENSACION DE FACTURAS POR CONCEPTO DE PROMOCIONES </span>
+    <br/>
+    <span>INDIGITAL XP, por disposición de la unidad de IR correspondiente, procederá vía liquidación a abonar a favor del Seller el monto de los descuentos/promociones/subvenciones de precios promocionales. En caso los pasivos generados por las facturas emitidas por los Sellers a favor de la unidad de IR, serán compensadas por estos últimos.</span>
+    <br/>
+    <br/>
+    <span>La compensación se realizará contra cualquier derecho de cobro generado por comprobantes de pago que se emitan a INDIGITAL XP, incluyendo notas de crédito emitidas por INDIGITAL XP.</span>
+    <br/>
+    <p align="center" class="title">***</p>
+    <br/>
+    <br/>
+    <p align="center" class="title" style="text-decoration-line: underline;">ANEXO 1 <br/> PRODUCTOS PROHIBIDOS PARA LA VENTA EN LOS MARKETPLACES </p>
+    <span>Celulares de cualquier tipo y/o marca:  </span><br/>
+    <span>INDIGITAL XP no permite publicar y/o solicitar que publiquemos equipos de telefonía celular o módems reportados como robados o clonados; ni Productos que tengan como fin la alteración, reemplazo, duplicación o modificación de equipos de telefonía celular.   </span><br/><br/>
+    <span>Armas, municiones y material explosivo:  </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Armas de fuego de alto o bajo calibre como lo son las armas deportivas, de colección, reliquidas o antiguas (disparen o no).
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Parte de armas de fuego, accesorios o elementos relacionados con el funcionamiento del arma: cañones, correderas, gatillos, silenciadores.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Granadas, explosivos, misiles, proyectiles y pólvora.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Miras para armas de fuego, así como también cualquier tipo de miras infrarrojas o detección de calor.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Balas y municiones par armas de fuego.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos o dispositivos cuyo fin sea el armado de explosivos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Máquinas para recarga y fabricación de municiones.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Herramientas o equipos que permitan modificar armas.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Estupefacientes y sustancias prohibidas: </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Estupefacientes, drogas, alucinógenos o cualquier tipo de sustancia no permitida por la ley vigente, en ninguna de las formas existentes. </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Aceite de cannabis.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Drogas o productos que posean efectos alucinógenos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Utensilios que sirvan para producir, modificar, procesar, consumir o promover el consumo, distribución y producción de las sustancias prohibidas.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Propiedad robada:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Cualquier tipo de propiedad robada.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos propiedad de empresas y gobiernos.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Medicamentos, sustancias y productos para la salud y/o la estética:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Medicamentos de venta libre y bajo receta o que requieran prescripción médica.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Medicamentos, productos o servicios que estén relacionados con la realización de abortos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos adelgazantes.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Sustancias que contengan anabólicos, esteroides u hormonas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Hongos o tés a los que se les atribuya la cura de enfermedades.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Sustancias naturales o artificiales que generen un efecto benéfico que pueda ser utilizado para tratar una enfermedad.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Botox.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos para alisado de cabellos que contengan formol.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Lentes con graduación.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Fuegos artificiales. </span><br/>
+    <br/>
+    <span>Productos financieros:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Préstamos o créditos financieros.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Dinero de curso legal.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Cheques o chequeras vigentes.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Acciones, bonos, títulos o cualquier otro papel que cotice en bolsa.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Cuentas bancarias y servicios de depósitos bancarios.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Tarjetas de crédito o débito estén o no en vigencia.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Terminales para pagos con tarjeta, lectoras y duplicadoras de códigos de tarjetas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Monedas y billetes que repliquen a los que se encuentran en circulación.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Criptomonedas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Servicios, programas o mecanismos destinados a eliminar el historial crediticio de una persona física o jurídica.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Cajeros automáticos (ATM), ya sea enteros, en partes o sus repuestos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Venta de MP Point / MP Point bluetooth.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Oro.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Monedas o billetes fuera de circulación.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Monedas o billetes de juguete.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Terminales para pagos con tarjeta (POS) (MPOS).
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Listas de correo y base de datos personales: </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Listas de correo masivo.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Bases de datos personales, padrones electorales, números de tarjetas, contactos comerciales o de proveedores o cualquier otro tipo de listado que contenga datos privados.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Compra o venta de seguidores de redes sociales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Herramientas, software o servicios que permitan el envío de mensajes masivos no solicitados (SPAM).
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Likes en redes sociales.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Productos o servicios para adultos: </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Solicitudes u ofertas de artículos con temáticas sexuales prohibidos por la ley, como: prostitución, pedofilia, zoofilia, necrofilia, incesto real.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Artículos con fines sexuales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Revistas, videos o fotografías pornográficas o de contenido sexual.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Descripciones gráficas u obscenas en el título o descripción.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Disfraces eróticos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos afrodisíacos o que contengan feromonas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Figuras o juguetes que se muestren desnudos o en posiciones sexuales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Cualquier producto que tenga fines sexuales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Preservativos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Libros informativos relacionados con temáticas sexuales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Obras artísticas que incluyan desnudos.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Ropa</span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos usados, incluyendo ropa interior usada. Ejemplo: trajes de baño, calzoncillos, pañales ecológicos, etc.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Decodificadores y antenas:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Decodificadores, receptores, conversores, equipos o antenas que permitan ver señales pagas en forma gratuita.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Chips o placas que permitan desbloquear un receptor para ver señales pagas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Dongles o componentes que permitan modificar o desbloquear receptores, como, por ejemplo: LBN o LBNF.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Componentes que permitan realizar CardSharing.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Servicios de modificación, actualización, instalación o reparación de los productos prohibidos por esta política.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Conversores o receptores para señales libres. Por ejemplo: banda C y banda KU.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Placas capturadoras y sintonizadoras de video.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Receptores para televisión digital.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Divisores de señal para TV analógica o digital.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Antenas de hilo, de apertura o planas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Antenas de señal analógica y digital que solo capten las bandas C y KU.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Antenas UHF y VHF cuando no permitan recibir señales pagas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Antenas de disco o parabólicas cuando no permitan ver señales de TV paga.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Publicaciones que violen derecho de Propiedad Intelectual (Indecopi):  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Publicaciones que violen las leyes sobre derecho de autor, patentes, marcas, modelos y diseños industriales y denominaciones de origen, según lo establecido en las normas aplicables según Indecopi.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Patrimonio histórico, cultural, arqueológico y paleontológico  </span><br/>
+    <span>Objetos considerados parte del patrimonio arqueológico: </span>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Restos fósiles como huesos, huevos, impresiones de plantas, madera petrificada, ámbar, etc.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Estalactitas, estalagmitas o cualquier otro tipo de producto proveniente de excavaciones.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Material etnológico, esculturas, puntas de flecha, herramientas, etc.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Documentos oficiales originales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Artículos que hayan pertenecido a un personaje histórico para cualquier país o estén relacionados con un hecho histórico puntual.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Los bienes pertenecientes al Patrimonio Cultural de la Nación que infrinjan la normativa vigente.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Minerales y metales.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Réplicas de productos fósiles.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Estampillas
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Réplicas de artículos que puedan ser considerados patrimonio histórico.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Programas o servicios para hackear dispositivos electrónicos:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Dispositivos o programas que permitan guardar lo que se escribe en el teclado. Por ejemplo: keylogger, key ghost y key shark.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Servicios de recuperación de contraseñas o de hackeo de correos electrónicos.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Softwares que permitan invadir un dispositivo electrónico.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Claves, validadores, productos o servicios que permitan generar números de series para juegos o programas.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Software, servicios, módems, cables o cualquier otro producto que permita acceder a servicios de internet pagos en forma gratuita.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Programas para generar boletos de pago de entidades bancarias.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Software espía para celulares.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Libros o cursos que enseñen a hackear.
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <span>Productos que requieran homologación o autorización de organismos estatales:  </span><br/>
+    <table class="no-spacing" width="700px">
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos que no tengan las homologaciones y/o certificaciones legales correspondientes, emitidas por la autoridad de aplicación.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos que sean denunciados por la autoridad competente por representar riesgos para la salud y/o integridad de los consumidores.
+            </td>
+        </tr>
+        <tr>
+            <td style="vertical-align: top;">-</td>
+            <td style="text-align: justify;">
+                Productos que no tengan los certificados de seguridad y etiquetas exigidas por la autoridad de aplicación.
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
+

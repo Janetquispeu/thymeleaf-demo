@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layout">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <style>
+        body {
+          margin: 0px;
+          padding: 0px;
+          font-family: "Arial";
+          overflow-x: hidden;
+        }
+
+        tr > th {
+            color: #1A5DAD;
+            font-size: 11px;
+            font-weight: 800;
+            padding-top: 8px;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        ul {
+            margin: 0;
+            padding-inline-start: 20px;
+        }
+
+        #b-order-guide-container {
+          display: block;
+          position: relative;
+          width: 400px;
+          overflow: hidden;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 10px;
+        }
+
+        #b-reception_code_img {
+          width: 158px;
+          height: 41px;
+        }
+
+        #b-reception_qr_code_img {
+          width: 55px;
+          height: 59px;
+          position: absolute;
+        }
+
+        #b-carrier-section, #b-delivery-guide-wrapper, #b-sender-wrapper, #b-recipient-subtitle-wrapper, #b-content-package-subtitle-wrapper {
+            display: block;
+            margin-bottom: 8px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        #b-delivery-section {
+            display: block;
+            height: initial;
+            position: relative;
+        }
+
+        #b-right-content {
+            display: block;
+            height: initial;
+            width: calc(100% - 240px);
+        }
+
+        #b-left-content {
+            border: 1px solid #4b4d5363;
+            border-radius: 3px;
+            display: block;
+            height: 90px;
+            position: absolute;
+            right: 0px;
+            top: 5px;
+            width: 250px;
+        }
+
+        #b-recipient-section, #b-content-package-section {
+            display: block;
+            position: relative;
+            .b-float-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        #b-delivery_code_img {
+            height: 70px;
+            width: 250px;
+        }
+
+        #b-delivery_qr_code_img {
+            height: 72px;
+            position: absolute;
+            width: 76px;
+        }
+
+        .b-subtitle {
+            color: #1A5DAD;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .b-flag {
+            background-color: #1A5DAD;
+            display: block;
+            height: 3px;
+            left: -5px;
+            position: absolute;
+            top: 6px;
+            transform: rotate(90deg);
+            width: 15px;
+            border-radius: 5px;
+        }
+
+        .b-text, li {
+            color: #4B4D53;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .b-block {
+            display: block;
+        }
+
+        .b-inline {
+            display: inline-block;
+        }
+
+        .b-recipient-content, .b-content-package {
+            border: 1px solid #4b4d5363;
+            padding: 8px;
+            border-radius: 3px;
+            margin-bottom: 6px;
+        }
+
+        .b-delivery-code-section {
+            border: 1px solid #4b4d5363;
+            border-radius: 3px;
+            display: block;
+            margin-top: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div id="b-order-guide-container">
+        <div id="b-carrier-section">
+            <span class="b-flag"></span>
+            <span class="b-subtitle b-block">Transportadora</span>
+            <span class="b-text b-block">CONSTRUCTOR OXAPAMPINO EMPRESA INDIVIDUAL DE SELLER PARA CENTER RESPONSABILIDAD LIMITADA - "COXA" E.I.R.L.</span>
+        </div>
+        <div id="b-delivery-section" style="margin-bottom: 18px;">
+            <div id="b-right-content">
+                <div id="b-delivery-guide-wrapper">
+                    <span class="b-flag"></span>
+                    <span class="b-subtitle b-block">Guía de Entrega:</span>
+                    <span class="b-text b-block">PVv7687569plzv-01</span>
+                </div>
+                <div id="b-sender-wrapper">
+                    <span class="b-flag"></span>
+                    <span class="b-subtitle b-block">Remitente</span>
+                    <span class="b-text b-block" style="width: 130px">DISTRIBUIDORAS TRANSPORTADORAS UNIDAS DEL PERU</span>
+                </div>
+            </div>
+            <div id="b-left-content">
+                <table style="height: 100%; width: 100%; padding: 0 5px;">
+                    <thead>
+                        <tr>
+                            <th>Código de recepción</th>
+                            <th>Código QR</th>
+                        </tr>
+                    </thead>
+                    <tbody style="vertical-align: baseline;">
+                        <tr>
+                            <td style="position: relative;">
+                                <div id="b-reception_code_img">
+                                    <img src="guide/image/SLV7687569PLZV011441" />
+                                </div>
+                                <div class="b-text" style="text-align: center">
+                                    <span>SLV7687569PLZV011441</span>
+                                </div>
+                            </td>
+                            <td style="position: relative;">
+                                <div id="b-reception_qr_code_img">
+                                    <img src="guide/qr/SLV7687569PLZV011441" />
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="b-recipient-section">
+            <div id="b-recipient-subtitle-wrapper">
+                <span class="b-flag"></span>
+                <span class="b-subtitle b-block">Destinatario</span>
+            </div>
+            <div class="b-recipient-content" style="min-height: 100px;">
+                <div>
+                    <span class="b-subtitle b-inline">Nombre:</span>
+                    <span class="b-text">Gonzalo Alonso Carlos Villanueva Romero</span>
+                </div>
+                <div>
+                    <span class="b-subtitle b-inline">Celular:</span>
+                    <span class="b-text">961632117</span>
+                </div>
+                <div>
+                    <span class="b-subtitle b-inline">Dirección</span>
+                    <span class="b-text">Calle Morelli 181 San Borja Lima 14324</span>
+                </div>
+                <div>
+                    <span class="b-subtitle b-inline">Referencia:</span>
+                    <span class="b-text">Calle Morelli 181 San Borja Lima 14324</span>
+                </div>
+            </div>
+            <div class="b-float-right">
+                <span class="b-subtitle b-inline">Fecha:</span>
+                <span class="b-text">01/09/2024</span>
+            </div>
+        </div>
+        <div id="b-content-package-section">
+            <div id="b-content-package-subtitle-wrapper">
+                <span class="b-flag"></span>
+                <span class="b-subtitle b-block">Contenido del paquete</span>
+            </div>
+            <div class="b-content-package" style="min-height: 100px;">
+                <span><ul><li>Videojuego PS4 Street Fighter V Champion Edition</li><li>Videojuego PS4 Street Fighter V Champion Edition</li><li>Videojuego PS4 Street Fighter V Champion Edition</li></ul></span>
+            </div>
+            <div class="b-float-right">
+                <span class="b-subtitle b-inline">Total de piezas:</span>
+                <span class="b-text b-inline">3</span>
+            </div>
+        </div>
+        <div>
+            <span class="b-text b-block">*Para cambios o devoluciones el producto tendrá que estar en buenas condiciones y sellado para su venta. <b>Caso contrario no será aceptado</b> </span>
+        </div>
+        <div class="b-delivery-code-section">
+            <table style="height: 100%; width: 100%; padding: 0 5px;">
+                <thead>
+                    <tr>
+                        <th>Código de entrega</th>
+                        <th>Código QR</th>
+                    </tr>
+                </thead>
+                <tbody style="vertical-align: baseline;">
+                    <tr>
+                        <td style="position: relative;">
+                            <div id="b-delivery_code_img">
+                                <img src="guide/image/PVv7687569plzv-01" />
+                            </div>
+                        </td>
+                        <td style="position: relative;">
+                            <div id="b-delivery_qr_code_img">
+                                <img src="guide/qr/PVv7687569plzv-01" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
