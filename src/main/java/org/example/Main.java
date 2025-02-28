@@ -83,7 +83,7 @@ public class Main {
 
             sellerContract sellerContract = new sellerContract(
                     "Gonzalo Alonso Carlos Villanueva Romero",
-                    "",
+                    "12345678910",
                     "",
                     "",
                     "",
@@ -126,9 +126,9 @@ public class Main {
             ByteArrayOutputStream target = new ByteArrayOutputStream();
             PdfWriter writer = new PdfWriter(new FileOutputStream(outputPath));
             PdfDocument pdfDocument = new PdfDocument(writer);
-            pdfDocument.setDefaultPageSize(PageSize.A4.rotate());
+            //pdfDocument.setDefaultPageSize(PageSize.A4.rotate());
             Document document = new Document(pdfDocument);
-            document.setMargins(0, 0, 0, 0);
+            //document.setMargins(0, 0, 0, 0);
             ConverterProperties converterProperties = new ConverterProperties();
 
             HtmlConverter.convertToPdf(renderedHtml, pdfDocument, converterProperties);
